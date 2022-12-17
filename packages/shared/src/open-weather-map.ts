@@ -52,10 +52,11 @@ export async function fetchCurrentWeather({
     url.searchParams.append("units", units);
     const response = await fetch(url.toString().replace("/?", "?"));
     const data = await response.json();
-    const dataSatisfiesSchema = Weather.safeParse(data);
-    if (!dataSatisfiesSchema.success)
+    const dataIsValid = Weather.safeParse(data).success;
+    const validData = Weather.parse(data);
+    if (!dataIsValid)
       console.warn("Weather data does not satisfy schema", data);
-    return data;
+    return validData;
   } catch (error) {
     console.error(error);
     throw error;

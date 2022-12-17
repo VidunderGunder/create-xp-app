@@ -22,11 +22,9 @@ export const HomeScreen = () => {
     const onResize = (event: { window: { width: number; height: number } }) => {
       setWidth(event.window.width);
     };
-    Dimensions.addEventListener("change", onResize);
+    const dimensionsHandler = Dimensions.addEventListener("change", onResize);
     return () => {
-      // Not sure if this is needed, but I don't want to risk it or spend time troubleshooting atm
-      // @ts-ignore-next-line
-      Dimensions.removeEventListener?.("change", onResize);
+      dimensionsHandler.remove();
     };
   }, []);
 

@@ -11,7 +11,16 @@ export default function useWeatherQuery({
   units = "metric",
 }: FetchCurrentWeatherProps) {
   // Fetch weather data from OpenWeatherMap API
-  const { data, isLoading, isError } = useQuery({
+
+  console.log("useWeatherQuery", {
+    cityName,
+    latitude,
+    longitude,
+    language,
+    units,
+  });
+
+  const query = useQuery({
     queryKey: ["weather", cityName, latitude, longitude, language, units],
     queryFn: async () => {
       if (typeof cityName === "string")
@@ -31,5 +40,5 @@ export default function useWeatherQuery({
     },
   });
 
-  return { data, isLoading, isError };
+  return query;
 }

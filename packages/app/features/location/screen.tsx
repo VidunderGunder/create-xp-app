@@ -14,6 +14,18 @@ const { useParam } = createParam<{ location: string }>();
 
 export function LocationScreen() {
   const [location] = useParam("location");
+  const isCoordinates = location?.includes(",");
+  const props: FetchCurrentWeatherProps = isCoordinates
+    ? {
+        latitude: Number(location?.split(",")[0]),
+        longitude: Number(location?.split(",")[1]),
+      }
+    : { cityName: location };
+  const { data, isLoading, isError } = useWeatherQuery(props);
+
+  if (isLoading || isError) {
+    return null;
+  }
 
   if (!location) {
     return (
@@ -30,17 +42,6 @@ export function LocationScreen() {
       </View>
     );
   }
-
-  const isCoordinates = location?.includes(",");
-
-  const props: FetchCurrentWeatherProps = isCoordinates
-    ? {
-        latitude: Number(location.split(",")[0]),
-        longitude: Number(location.split(",")[1]),
-      }
-    : { cityName: location };
-
-  const { data } = useWeatherQuery(props);
 
   const description = data?.weather?.[0]?.description;
   const temperature = data?.main?.temp;
