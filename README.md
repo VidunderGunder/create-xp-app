@@ -104,7 +104,21 @@ pnpx expo install react-native-reanimated
 cd ../..
 ```
 
-You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue. I use `lerna-update-wizard` to help with this (you don't need to use Lerna to use that lib).
+### Syncing `📁 app` & `📁 expo` dependencies
+
+You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue.
+
+To install the same version of a package in both `packages/app` and `packages/expo`, you can use the `--filter` flag:
+
+```sh
+pnpm i react-native-reanimated --filter=app --filter=expo
+```
+
+And to sync the versions of all packages in both `packages/app` and `packages/expo`, you can use the `--sync` flag:
+
+```sh
+pnpm i --sync --filter=app --filter=expo
+```
 
 ## 🔐 Authentication (☢️ WIP)
 
