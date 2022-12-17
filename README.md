@@ -1,4 +1,4 @@
-# Weather App
+# create-xp-app
 
 ![Hero Image](./resources/hero.png)
 
