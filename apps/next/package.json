@@ -10,7 +10,7 @@
     "lint": "NODE_OPTIONS=--openssl-legacy-provider next lint"
   },
   "dependencies": {
-    "@acme/app": "*",
+    "@acme/app": "0.1.0",
     "@expo/next-adapter": "^4.0.12",
     "@zeit/next-source-maps": "^0.0.3",
     "dotenv": "^16.0.3",

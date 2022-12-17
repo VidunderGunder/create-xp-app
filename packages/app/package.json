@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "main": "index.ts",
   "dependencies": {
-    "@acme/api": "*",
-    "@acme/shared": "*",
+    "@acme/api": "0.1.0",
+    "@acme/shared": "0.1.0",
     "@tanstack/react-query": "^4.16.1",
     "@trpc/client": "^10.1.0",
     "@trpc/react-query": "^10.1.0",
@@ -12,10 +12,24 @@
     "dayjs": "^1.11.7",
     "dripsy": "^3.8.1",
     "expo-linking": "^3.2.3",
-    "moti": "^0.21.0",
-    "react-native-reanimated": "2.13.0",
     "solito": "^2.1.0",
-    "zod": "^3.18.0"
+    "zod": "^3.18.0",
+    "@shopify/flash-list": "^1.4.0",
+    "expo": "~47.0.8",
+    "expo-location": "~15.0.1",
+    "expo-router": "^0.0.39",
+    "expo-splash-screen": "~0.17.5",
+    "expo-status-bar": "~1.4.2",
+    "moti": "^0.21.0",
+    "nativewind": "^2.0.11",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.71.0-rc.3",
+    "react-native-gesture-handler": "~2.8.0",
+    "react-native-reanimated": "~2.12.0",
+    "react-native-safe-area-context": "4.4.1",
+    "react-native-screens": "~3.18.0",
+    "react-native-web": "~0.18.10"
   },
   "sideEffects": false
 }

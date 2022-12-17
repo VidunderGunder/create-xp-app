@@ -10,8 +10,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@acme/auth": "*",
-    "@acme/db": "*",
+    "@acme/auth": "0.1.0",
+    "@acme/db": "0.1.0",
     "@trpc/client": "^10.1.0",
     "@trpc/server": "^10.1.0",
     "superjson": "^1.9.1",
