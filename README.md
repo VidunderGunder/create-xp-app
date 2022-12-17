@@ -1,7 +1,5 @@
 # create-xp-app
 
-![Hero Image](./resources/hero.png)
-
 A cross-platform app starter based on [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo) and [all things Fernando Rojo](https://github.com/nandorojo) ([Solito](https://solito.dev/), [Dripsy](https://www.dripsy.xyz/), [Moti](https://moti.fyi/), etc.).
 
 ## 🚀 Getting Started
