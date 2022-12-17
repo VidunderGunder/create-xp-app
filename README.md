@@ -205,6 +205,4 @@ Open up any TypeScript file in the project and press...
 - <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Mac
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Windows
 
-Then restart the TypeScript server, with the command `TypeScript: Restart TS Server`:
-
-![Restart TypeScript Server](./resources/restart-ts.png)
+Then restart the TypeScript server, with the command `TypeScript: Restart TS Server`.
