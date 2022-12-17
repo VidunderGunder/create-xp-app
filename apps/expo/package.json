@@ -16,6 +16,7 @@
     "@shopify/flash-list": "^1.4.0",
     "dotenv": "^16.0.3",
     "expo": "~47.0.8",
+    "expo-constants": "^14.0.2",
     "expo-location": "~15.0.1",
     "expo-router": "^0.0.39",
     "expo-splash-screen": "~0.17.5",
