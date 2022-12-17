@@ -1,0 +1,7 @@
+{
+  "CSS Prop": {
+    "prefix": "css",
+    "body": ["css={css$1`", "\t$2", "`}"],
+    "description": "`css`-prop for Emotion and styled-components"
+  }
+}

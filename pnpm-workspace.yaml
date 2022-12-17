@@ -1,0 +1,8 @@
+packages:
+  - apps/expo
+  - apps/next
+  - packages/app
+  - packages/shared
+  - packages/api
+  - packages/auth
+  - packages/db

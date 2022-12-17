@@ -1,0 +1,21 @@
+{
+  "name": "@acme/app",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@acme/api": "*",
+    "@acme/shared": "*",
+    "@tanstack/react-query": "^4.16.1",
+    "@trpc/client": "^10.1.0",
+    "@trpc/react-query": "^10.1.0",
+    "@trpc/server": "^10.1.0",
+    "dayjs": "^1.11.7",
+    "dripsy": "^3.8.1",
+    "expo-linking": "^3.2.3",
+    "moti": "^0.21.0",
+    "react-native-reanimated": "2.13.0",
+    "solito": "^2.1.0",
+    "zod": "^3.18.0"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,29 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "Prisma.prisma",
+    "pomdtr.excalidraw-editor",
+    "zixuanchen.vitest-explorer",
+    "joshbolduc.story-explorer",
+    "usernamehw.errorlens",
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "github.copilot",
+    "xabikos.javascriptsnippets",
+    "yechunan.json-color-token",
+    "bierner.github-markdown-preview",
+    "bierner.markdown-preview-github-styles",
+    "bierner.markdown-mermaid",
+    "hancel.markdown-image",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "rangav.vscode-thunder-client",
+    "antiantisepticeye.vscode-color-picker",
+    "styled-components.vscode-styled-components",
+    "redhat.vscode-yaml",
+    "arcanis.vscode-zipfs",
+    "aaron-bond.better-comments"
+  ]
+}
