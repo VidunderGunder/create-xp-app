@@ -29,8 +29,13 @@ export default function useWeatherQuery({
           language,
           units,
         });
-      throw new Error("Invalid arguments");
+      console.warn(
+        "Invalid arguments passed to useWeatherQuery. Make sure `cityName` or `latitude` and `longitude` is provided.",
+      );
     },
+    enabled:
+      typeof cityName === "string" ||
+      (typeof latitude === "number" && typeof longitude === "number"),
   });
 
   return query;
