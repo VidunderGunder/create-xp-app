@@ -10,6 +10,8 @@
     "app",
     "index.ts",
     "metro.config.js",
-    "app-env.d.ts"
+    "app-env.d.ts",
+    "babel.config.js",
+    "app.config.ts"
   ]
 }

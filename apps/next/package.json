@@ -7,10 +7,12 @@
     "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
     "start": "NODE_OPTIONS=--openssl-legacy-provider next start",
-    "lint": "NODE_OPTIONS=--openssl-legacy-provider next lint"
+    "lint": "NODE_OPTIONS=--openssl-legacy-provider next lint",
+    "clean": "rm -rf .next node_modules ../../.expo/web/cache"
   },
   "dependencies": {
-    "@acme/app": "0.1.0",
+    "@acme/api": "*",
+    "@acme/app": "*",
     "@expo/next-adapter": "^4.0.12",
     "@zeit/next-source-maps": "^0.0.3",
     "dotenv": "^16.0.3",

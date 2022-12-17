@@ -11,6 +11,7 @@
     "build": "turbo build",
     "clean": "rm -rf node_modules",
     "clean:workspaces": "turbo clean",
+    "clean:reinstall": "pnpm clean:workspaces ; pnpm i",
     "db-generate": "turbo db-generate",
     "db-push": "turbo db-push",
     "dev": "turbo dev --parallel",

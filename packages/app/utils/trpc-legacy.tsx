@@ -1,25 +1,15 @@
 import { createTRPCReact } from "@trpc/react-query";
 import type { AppRouter } from "@acme/api";
 /**
- * Extend this function when going to production by
- * setting the baseUrl to your production API URL.
- */
-import Constants from "expo-constants";
-/**
- * A wrapper for your app that provides the TRPC context.
- * Use only in _app.tsx
- */
-import React from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { httpBatchLink } from "@trpc/client";
-import { transformer } from "@acme/api/transformer";
-import { useAuth } from "@clerk/clerk-expo";
-
-/**
  * A set of typesafe hooks for consuming your API.
  */
 export const trpc = createTRPCReact<AppRouter>();
 
+/**
+ * Extend this function when going to production by
+ * setting the baseUrl to your production API URL.
+ */
+import Constants from "expo-constants";
 const getBaseUrl = () => {
   /**
    * Gets the IP address of your host-machine. If it cannot automatically find it,
@@ -32,22 +22,24 @@ const getBaseUrl = () => {
   return `http://${localhost}:3000`;
 };
 
-export const TRPCProvider: React.FC<{
-  children: React.ReactNode;
-}> = ({ children }) => {
-  const { getToken } = useAuth();
+/**
+ * A wrapper for your app that provides the TRPC context.
+ * Use only in _app.tsx
+ */
+import React from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { httpBatchLink } from "@trpc/client";
+import { transformer } from "@acme/api/transformer";
+
+export const TRPCProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [queryClient] = React.useState(() => new QueryClient());
   const [trpcClient] = React.useState(() =>
     trpc.createClient({
       transformer,
       links: [
         httpBatchLink({
-          async headers() {
-            const token = await getToken();
-            return {
-              Authorization: token || "",
-            };
-          },
           url: `${getBaseUrl()}/api/trpc`,
         }),
       ],
@@ -59,10 +51,4 @@ export const TRPCProvider: React.FC<{
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </trpc.Provider>
   );
-};
-
-export const TRPCAuthContext: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  return <TRPCProvider>{children}</TRPCProvider>;
 };

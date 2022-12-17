@@ -182,7 +182,7 @@ export default forwardRef<ViewType, Props>(function WeatherCard(
   return (
     <DripsyMotiLink
       ref={ref}
-      href={`/${cityName ?? [latitude, longitude].join(",")}`}
+      href={`/location/${cityName ?? [latitude, longitude].join(",")}`}
       onPress={handleOpenWeatherDetails}
       transition={{
         type: "timing",

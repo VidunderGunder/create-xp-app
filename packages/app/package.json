@@ -5,6 +5,9 @@
   "dependencies": {
     "@acme/api": "0.1.0",
     "@acme/shared": "0.1.0",
+    "@clerk/clerk-expo": "^0.10.14",
+    "@clerk/clerk-react": "^4.6.4",
+    "@clerk/nextjs": "^4.6.13",
     "@shopify/flash-list": "^1.4.0",
     "@tanstack/react-query": "^4.16.1",
     "@trpc/client": "^10.1.0",
@@ -17,6 +20,7 @@
     "expo-linking": "^3.2.3",
     "expo-location": "~15.0.1",
     "expo-router": "^0.0.39",
+    "expo-secure-store": "^12.0.0",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",
     "moti": "^0.21.0",
