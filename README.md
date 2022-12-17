@@ -90,35 +90,28 @@ pnpm i date-fns --filter=app
 
 ### Native dependencies
 
-If you're installing a library with any native code, you must install it in `apps/expo`:
+If you're installing a library with any native code, you must install it in `📁 apps/expo`, but for good DX in `📁 packages/app`, you should install it in both places:
 
 ```sh
-pnpm i react-native-reanimated --filter=expo
+pnpm i:native react-native-reanimated
 ```
 
-Or using Expo:
+> Which under the hood is the same as:
+>
+> ```sh
+> pnpm i --filter=expo --filter=app react-native-reanimated
+> ```
+
+### Syncing native dependencies
+
+To sync the versions of all packages installed in both `📁 packages/app` and `📁 packages/expo`, you can use syncpack to check versions, find potential mismatches and then fix them:
 
 ```sh
-cd packages/expo
-pnpx expo install react-native-reanimated
-cd ../..
+pnpm syncpack:check
+pnpm syncpack:fix
 ```
 
-### Syncing `📁 app` & `📁 expo` dependencies
-
-You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue.
-
-To install the same version of a package in both `packages/app` and `packages/expo`, you can use the `--filter` flag:
-
-```sh
-pnpm i react-native-reanimated --filter=app --filter=expo
-```
-
-And to sync the versions of all packages in both `packages/app` and `packages/expo`, you can use the `--sync` flag:
-
-```sh
-pnpm i --sync --filter=app --filter=expo
-```
+If some packages are only installed in `📁 app/expo`, you'll need to add those to `📁 packages/app/package.json` manually.
 
 ## 🔐 Authentication (☢️ WIP)
 

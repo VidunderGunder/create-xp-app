@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
   return (
     <>
       <Head>
-        <title>Weather App</title>
+        <title>Create XP App</title>
         <meta
           name="description"
           content="A cross-platform weather app by Kristian Kramås"
