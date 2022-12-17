@@ -136,7 +136,7 @@ export function LocationScreen() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "between",
+              justifyContent: "space-between",
             }}
           >
             <Text
@@ -194,14 +194,14 @@ export function LocationScreen() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "between",
+              justifyContent: "space-between",
             }}
           >
             <View
               sx={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "between",
+                justifyContent: "space-between",
               }}
             >
               <KeyValueCuties
@@ -217,7 +217,7 @@ export function LocationScreen() {
               sx={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "between",
+                justifyContent: "space-between",
               }}
             >
               <KeyValueCuties
