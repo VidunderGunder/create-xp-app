@@ -2,6 +2,9 @@ import { DripsyProvider, makeTheme } from "dripsy";
 
 const theme = makeTheme({
   // https://www.dripsy.xyz/usage/theming/create
+  types: {
+    reactNativeTypesOnly: true,
+  },
   text: {
     p: {
       fontSize: 16,
@@ -18,11 +21,11 @@ const theme = makeTheme({
   },
 });
 
-// type MyTheme = typeof theme;
-
-// declare module "dripsy" {
-//   type DripsyCustomTheme = MyTheme;
-// }
+type MyTheme = typeof theme;
+declare module "dripsy" {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DripsyCustomTheme extends MyTheme {}
+}
 
 export function Dripsy({ children }: { children: React.ReactNode }) {
   return (

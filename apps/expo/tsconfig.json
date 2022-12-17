@@ -4,5 +4,12 @@
     "strict": true,
     "jsx": "react-native"
   },
-  "include": ["src", "*/.ts", "app", "index.ts", "metro.config.js"]
+  "include": [
+    "src",
+    "*/.ts",
+    "app",
+    "index.ts",
+    "metro.config.js",
+    "app-env.d.ts"
+  ]
 }
