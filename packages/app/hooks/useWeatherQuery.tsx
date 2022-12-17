@@ -1,6 +1,9 @@
 import { fetchCurrentWeather, FetchCurrentWeatherProps } from "@acme/shared";
 import { useQuery } from "@tanstack/react-query";
 
+/**
+ * Fetch weather data from OpenWeatherMap API
+ */
 export default function useWeatherQuery({
   cityName,
   latitude,
@@ -10,16 +13,6 @@ export default function useWeatherQuery({
   // TODO: Implement with global state and storage (user settings)
   units = "metric",
 }: FetchCurrentWeatherProps) {
-  // Fetch weather data from OpenWeatherMap API
-
-  console.log("useWeatherQuery", {
-    cityName,
-    latitude,
-    longitude,
-    language,
-    units,
-  });
-
   const query = useQuery({
     queryKey: ["weather", cityName, latitude, longitude, language, units],
     queryFn: async () => {

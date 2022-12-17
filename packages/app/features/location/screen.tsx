@@ -27,6 +27,22 @@ export function LocationScreen() {
     return null;
   }
 
+  if (isLoading) {
+    return (
+      <View
+        sx={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+          width: "100%",
+        }}
+      >
+        <Text sx={{ textAlign: "center" }}>Loading...</Text>
+      </View>
+    );
+  }
+
   if (!location) {
     return (
       <View
