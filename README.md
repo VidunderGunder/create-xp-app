@@ -135,10 +135,6 @@ NEXT_PUBLIC_CLERK_FRONTEND_API=...
 
 Below are ways to solve them.
 
-> _If you ask for help before attempting these fixes, and they would have solved your problem, you owe the person who helped you a beer (or equivalent)._
->
-> _However, if it's a new problem or the instructions we're unclear, you'll get honor and recognition points. Maybe even a beer (or equivalent)._
-
 ### Generally
 
 Restart VSCode.
