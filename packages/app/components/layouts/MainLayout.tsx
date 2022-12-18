@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import type { ComponentPropsWithoutRef } from "react";
 import { View, SafeAreaView } from "dripsy";
 import type { SafeAreaView as SafeAreaViewType } from "react-native";
+import Navigation from "../Navigation";
 
 type Props = {
   noImage?: boolean;
@@ -13,39 +14,27 @@ export default forwardRef<SafeAreaViewType, Props>(function MainLayout(
   ref,
 ) {
   return (
-    <View
-      sx={{
-        position: "absolute",
-        zIndex: 0,
+    <SafeAreaView
+      ref={ref}
+      {...props}
+      sx={(theme) => ({
+        backgroundColor: theme.colors.$background,
         height: "100%",
         width: "100%",
-        backgroundColor: "#2951a1",
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-      }}
+        ...sx,
+      })}
     >
-      <SafeAreaView
-        ref={ref}
-        {...props}
+      <View
         sx={{
           height: "100%",
           width: "100%",
-          backgroundColor: "#0e387b",
-          ...sx,
+          padding: 2,
+          position: "relative",
         }}
       >
-        <View
-          sx={{
-            height: "100%",
-            width: "100%",
-            padding: 2,
-          }}
-        >
-          {children}
-        </View>
-      </SafeAreaView>
-    </View>
+        {children}
+        <Navigation />
+      </View>
+    </SafeAreaView>
   );
 });

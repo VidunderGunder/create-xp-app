@@ -11,7 +11,7 @@ const fixReanimatedIssue = () => {
 
 fixReanimatedIssue();
 
-import { Provider } from "@acme/app";
+import { Provider } from "@acme/app/provider";
 import Head from "next/head";
 import React from "react";
 import type { SolitoAppProps } from "solito";
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
         <title>Create XP App</title>
         <meta
           name="description"
-          content="A cross-platform weather app by Kristian Kramås"
+          content="A cross-platform fullstack app by Kristian Kramås"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

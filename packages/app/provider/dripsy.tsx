@@ -11,6 +11,7 @@ const theme = makeTheme({
     },
   },
   colors: {
+    $background: "#0e387b",
     $primary: "#7acaf0",
     $secondary: "#5811c9",
     $light: "#f5f5f5",

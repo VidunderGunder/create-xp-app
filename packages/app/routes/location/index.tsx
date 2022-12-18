@@ -83,34 +83,32 @@ export function LocationScreen() {
           display: "flex",
         }}
       >
-        {Platform.OS === "web" ? (
-          <View
+        <View
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            p: 3,
+            zIndex: 1,
+          }}
+        >
+          <DripsyMotiLink
+            href={"/"}
             sx={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              p: 3,
-              zIndex: 1,
+              p: 12,
             }}
           >
-            <DripsyMotiLink
-              href={"/"}
+            <Text
               sx={{
-                p: 12,
+                color: "$white",
+                fontSize: 18,
+                fontWeight: "bold",
               }}
             >
-              <Text
-                sx={{
-                  color: "$white",
-                  fontSize: 18,
-                  fontWeight: "bold",
-                }}
-              >
-                ↩️{"  "}Go back
-              </Text>
-            </DripsyMotiLink>
-          </View>
-        ) : null}
+              ↩️
+            </Text>
+          </DripsyMotiLink>
+        </View>
         <Text
           sx={{
             pt: 3,

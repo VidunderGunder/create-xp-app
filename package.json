@@ -20,7 +20,7 @@
     "type-check": "turbo type-check",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
-    "syncpack:check": "pnpm syncpack check",
+    "syncpack:mismatches": "pnpm syncpack list-mismatches",
     "syncpack:fix": "pnpm syncpack fix-mismatches",
     "i:native": "pnpm i --filter=expo --filter=app"
   },

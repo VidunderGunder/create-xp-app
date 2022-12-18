@@ -15,6 +15,7 @@
     "@clerk/clerk-expo": "^0.10.14",
     "@shopify/flash-list": "^1.4.0",
     "dotenv": "^16.0.3",
+    "dripsy": "^3.8.1",
     "expo": "~47.0.8",
     "expo-constants": "^14.0.2",
     "expo-location": "~15.0.1",

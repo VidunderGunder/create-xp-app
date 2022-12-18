@@ -11,8 +11,8 @@
     "clean": "rm -rf .next node_modules ../../.expo/web/cache"
   },
   "dependencies": {
-    "@acme/api": "*",
-    "@acme/app": "*",
+    "@acme/api": "0.1.0",
+    "@acme/app": "0.1.0",
     "@expo/next-adapter": "^4.0.12",
     "@zeit/next-source-maps": "^0.0.3",
     "dotenv": "^16.0.3",

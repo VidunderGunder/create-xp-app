@@ -1,15 +1,1 @@
-import { LocationScreen } from "@acme/app";
-import { Stack } from "expo-router";
-
-export default () => {
-  return (
-    <>
-      <Stack.Screen
-        options={{
-          title: "Location Details",
-        }}
-      />
-      <LocationScreen />
-    </>
-  );
-};
+export { LocationScreen as default } from "@acme/app/routes/location";

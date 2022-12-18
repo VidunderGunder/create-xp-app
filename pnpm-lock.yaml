@@ -38,6 +38,7 @@ importers:
       '@types/react-native-dotenv': ^0.2.0
       dotenv: ^16.0.3
       dotenv-cli: ^6.0.0
+      dripsy: ^3.8.1
       eslint: ^8.28.0
       expo: ~47.0.8
       expo-constants: ^14.0.2
@@ -65,6 +66,7 @@ importers:
       '@clerk/clerk-expo': 0.10.14_i2gso7m36b24mnjhnoyolc7dwe
       '@shopify/flash-list': 1.4.0_x7tqs4miedm7ae64j5l6c5sj24
       dotenv: 16.0.3
+      dripsy: 3.8.1_w7fnlnutexbd62uhvucq6hwd7a
       expo: 47.0.8_@babel+core@7.20.5
       expo-constants: 14.0.2_expo@47.0.8
       expo-location: 15.0.1_expo@47.0.8
@@ -99,6 +101,7 @@ importers:
 
   apps/next:
     specifiers:
+      '@acme/api': 0.1.0
       '@acme/app': 0.1.0
       '@expo/next-adapter': ^4.0.12
       '@types/node': 17.0.21
@@ -113,6 +116,7 @@ importers:
       raf: ^3.4.1
       zod: ^3.18.0
     dependencies:
+      '@acme/api': link:../../packages/api
       '@acme/app': link:../../packages/app
       '@expo/next-adapter': 4.0.13_kjyjzknr3m5ebexftf2hsc6hby
       '@zeit/next-source-maps': 0.0.3
@@ -5415,7 +5419,7 @@ packages:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       rimraf: 3.0.2
       ssri: 8.0.1
       tar: 6.1.13
@@ -12726,15 +12730,6 @@ packages:
   /progress/2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
     engines: {node: '>=0.4.0'}
-    dev: false
-
-  /promise-inflight/1.0.1:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
     dev: false
 
   /promise-inflight/1.0.1_bluebird@3.7.2:
