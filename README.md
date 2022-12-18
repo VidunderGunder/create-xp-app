@@ -64,16 +64,16 @@ pnpm i -D <package> --filter=expo --filter=web
 
 > My experience is that `pnpm i` with filtering works the same from anywhere in the project, but other commands, for example `package.json`-scripts like `pnpm dev`, may vary. This may be wrong, so feel free to correct me.
 
-To install packages using [Expo](https://docs.expo.io/) however (if you want their automatic versioning, for example), you need to specify location, for example by `cd`-ing in to the relevant directory.
+To install packages using [Expo](https://docs.expo.io/) (maybe you want their [automatic versioning](https://docs.expo.dev/workflow/expo-cli/#install)), you need to specify location, by `cd`-ing in to the relevant directory.
 
-For example, to install `expo-location` in the `expo` package:
+To install a package (here `expo-location`) in the `expo` package:
 
 ```bash
 cd packages/expo
 pnpx expo install expo-location
 ```
 
-> When installing packages using Expo, the docs most often use `npx`, but as we're using `pnpm`, I recommend using `pnpx`, so:
+> When installing packages using Expo, the docs most often suggest `npx`, but as we're using `pnpm`, I recommend using `pnpx`, so:
 >
 > ❌ ~~`npx expo install expo-location`~~  
 > ✅ `pnpx expo install expo-location`
@@ -110,6 +110,15 @@ pnpm syncpack:fix
 ```
 
 If some packages are only installed in `📁 app/expo`, you'll need to add those to `📁 packages/app/package.json` manually.
+
+If you get errors on the web after installing a native dependency, you may need to tell Next.js to transpile the module in `📁 apps/next/next.config.js`:
+
+```js
+const withTM = require("next-transpile-modules")([
+  // Add the module here, e.g.:
+  "react-native-reanimated",
+]);
+```
 
 ## 🔐 Authentication (☢️ WIP)
 
