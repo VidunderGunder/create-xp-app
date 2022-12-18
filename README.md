@@ -111,12 +111,12 @@ pnpm syncpack:fix
 
 If some packages are only installed in `📁 app/expo`, you'll need to add those to `📁 packages/app/package.json` manually.
 
-If you get errors on the web after installing a native dependency, you may need to tell Next.js to transpile the module in `📁 apps/next/next.config.js`:
+If you get errors on the web after installing a native dependency, you may need to tell Next.js to transpile the module (or it's dependencies - check the error logs) in `📁 apps/next/next.config.js`:
 
 ```js
 const withTM = require("next-transpile-modules")([
   // Add the module here, e.g.:
-  "react-native-reanimated",
+  "recyclerlistview",
 ]);
 ```
 
