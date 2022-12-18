@@ -17,6 +17,7 @@
     "@zeit/next-source-maps": "^0.0.3",
     "dotenv": "^16.0.3",
     "next": "^13.0.6",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "raf": "^3.4.1",
     "zod": "^3.18.0"
   },

@@ -13,8 +13,8 @@ const withFonts = require("next-fonts");
 const withImages = require("next-images");
 const withPlugins = require("next-compose-plugins");
 const { dirname } = require("path");
-
-require("dotenv").config({ path: `../../.env` });
+const { config } = require("dotenv");
+config({ path: `../../.env` });
 
 const env = {};
 

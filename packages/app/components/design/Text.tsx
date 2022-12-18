@@ -1,27 +1,27 @@
 import { forwardRef } from "react";
-import { View } from "dripsy";
-import { View as ViewType } from "react-native";
+import { Text } from "dripsy";
+import { Text as _TextType } from "react-native";
 import { ComponentPropsWithoutRef } from "react";
 
-type Props = {
+export type TextProps = {
   // Custom props here
-} & ComponentPropsWithoutRef<typeof View>;
-
-// ! Always rename the component name `RENAME_ME` to match the file name
-export default forwardRef<ViewType, Props>(function RENAME_ME(
+} & ComponentPropsWithoutRef<typeof Text>;
+export type TextType = _TextType;
+export default forwardRef<TextType, TextProps>(function RENAME_ME(
   { children, sx, ...props },
   ref,
 ) {
   return (
-    <View
+    <Text
       ref={ref}
-      {...props}
       sx={(theme) => ({
         // Custom styles here
+        color: theme.colors.$white,
         ...(typeof sx === "function" ? sx(theme) : sx),
       })}
+      {...props}
     >
       {children}
-    </View>
+    </Text>
   );
 });

@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import type { ComponentPropsWithoutRef } from "react";
 import { View, SafeAreaView } from "dripsy";
-import type { SafeAreaView as SafeAreaViewType } from "react-native";
+import { SafeAreaView as SafeAreaViewType } from "react-native";
 import Navigation from "../Navigation";
 
 type Props = {
@@ -21,7 +21,7 @@ export default forwardRef<SafeAreaViewType, Props>(function MainLayout(
         backgroundColor: theme.colors.$background,
         height: "100%",
         width: "100%",
-        ...sx,
+        ...(typeof sx === "function" ? sx(theme) : sx),
       })}
     >
       <View

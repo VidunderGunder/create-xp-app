@@ -55,6 +55,7 @@ export default forwardRef<ViewType, Props>(function WeatherCard(
     longitude,
     language = "en",
     units = "metric",
+    sx,
     ...props
   },
   ref,
@@ -201,9 +202,10 @@ export default forwardRef<ViewType, Props>(function WeatherCard(
         [],
       )}
       {...props}
-      sx={{
+      sx={(theme) => ({
         width: "100%",
-      }}
+        ...(typeof sx === "function" ? sx(theme) : sx),
+      })}
     >
       <Card
         sx={{
