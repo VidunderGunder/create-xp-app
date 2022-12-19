@@ -24,11 +24,9 @@ export default forwardRef<ViewType, ButtonProps>(function Button(
             "worklet";
             const active = hovered || pressed;
             return {
-              type: "spring",
-              delay: active ? 0 : 100,
-              stiffness: active ? 1000 : 250,
-              damping: 40,
-              mass: active ? 0.25 : 1,
+              type: "timing",
+              duration: active ? 1 : 150,
+              // easing: active ? "easeOut" : "easeIn",
             };
           },
         [],

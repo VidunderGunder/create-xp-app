@@ -10,9 +10,12 @@ const theme = makeTheme({
       fontSize: 16,
     },
   },
+  linearGradients: {
+    peach: ["#ff006f", "#ff2a51"],
+  },
   colors: {
     $background: "#0e387b",
-    $primary: "#7acaf0",
+    $primary: "#00ffdd",
     $secondary: "#5811c9",
     $light: "#f5f5f5",
     $dark: "#1a1e2a",

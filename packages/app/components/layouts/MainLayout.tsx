@@ -3,6 +3,7 @@ import type { ComponentPropsWithoutRef } from "react";
 import { View, SafeAreaView } from "dripsy";
 import { SafeAreaView as SafeAreaViewType } from "react-native";
 import Navigation from "../Navigation";
+import Gradient from "../design/Gradient";
 
 type Props = {
   noImage?: boolean;
@@ -14,27 +15,30 @@ export default forwardRef<SafeAreaViewType, Props>(function MainLayout(
   ref,
 ) {
   return (
-    <SafeAreaView
-      ref={ref}
-      {...props}
-      sx={(theme) => ({
-        backgroundColor: theme.colors.$background,
-        height: "100%",
-        width: "100%",
-        ...(typeof sx === "function" ? sx(theme) : sx),
-      })}
-    >
-      <View
-        sx={{
+    <>
+      <Gradient />
+      <SafeAreaView
+        ref={ref}
+        {...props}
+        sx={(theme) => ({
           height: "100%",
           width: "100%",
-          padding: 2,
-          position: "relative",
-        }}
+          ...(typeof sx === "function" ? sx(theme) : sx),
+        })}
       >
-        {children}
-        <Navigation />
-      </View>
-    </SafeAreaView>
+        <View
+          sx={{
+            height: "100%",
+            width: "100%",
+            padding: 2,
+            position: "relative",
+            zIndex: 2,
+          }}
+        >
+          {children}
+          <Navigation />
+        </View>
+      </SafeAreaView>
+    </>
   );
 });

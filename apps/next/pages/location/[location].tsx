@@ -1,1 +1,1 @@
-export { LocationScreen as default } from "@acme/app/routes/location";
+export { default } from "@acme/app/routes/location";

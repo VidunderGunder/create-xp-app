@@ -5,14 +5,13 @@ import type { FetchCurrentWeatherProps } from "@acme/shared";
 import useWeatherQuery from "../../hooks/useWeatherQuery";
 import dayjs from "dayjs";
 import type { ReactNode } from "react";
-import { Platform } from "react-native";
 import { MotiLink } from "solito/moti";
 
 const DripsyMotiLink = styled(MotiLink)();
 
 const { useParam } = createParam<{ location: string }>();
 
-export function LocationScreen() {
+export default function LocationScreen() {
   const [location] = useParam("location");
   const isCoordinates = location?.includes(",");
   const props: FetchCurrentWeatherProps = isCoordinates

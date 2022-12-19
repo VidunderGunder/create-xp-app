@@ -2,10 +2,11 @@ const withTM = require("next-transpile-modules")([
   "solito",
   "dripsy",
   "@dripsy/core",
-  "moti",
+  "@dripsy/gradient",
   "@acme/app",
   "@shopify/flash-list",
   "recyclerlistview",
+  "moti",
 ]);
 const withSourceMaps = require("@zeit/next-source-maps");
 const { withExpo } = require("@expo/next-adapter");

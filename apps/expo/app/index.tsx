@@ -1,1 +1,1 @@
-export { HomeScreen as default } from "@acme/app/routes/home";
+export { default } from "@acme/app/routes/index";

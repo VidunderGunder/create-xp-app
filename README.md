@@ -131,6 +131,12 @@ CLERK_BACKEND_API=...
 NEXT_PUBLIC_CLERK_FRONTEND_API=...
 ```
 
+## 3️⃣🍆 3D with Three.js (☢️ WIP)
+
+Three.js recently added support for React Native. Holy f\*ces.
+
+TODO: Install by following react-three-fiber's [installation guide](https://docs.pmnd.rs/react-three-fiber/getting-started/installation#react-native).
+
 ## 🤯 Facing problems?
 
 Below are ways to solve them.
