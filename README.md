@@ -143,9 +143,10 @@ Below are ways to solve them.
 
 ### Generally
 
-Restart VSCode.
-
-Restart your computer.
+1. Restart VSCode.
+2. Clean and reinstall dependencies:  
+   `pnpm clean:reinstall`
+3. Restart your computer.
 
 ### Permission errors when running commands (Mac/Linux)
 
@@ -195,6 +196,15 @@ If so, install the 64-bit version instead.
 
 Or buy a Mac.
 
+### Weird typescript errors
+
+Open up any TypeScript file in the project and press...
+
+- <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Mac
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Windows
+
+Then restart the TypeScript server, with the command `TypeScript: Restart TS Server`.
+
 ### Divergent git branches
 
 ```bash
@@ -209,11 +219,4 @@ Kill the processes using the ports:
 kill -9 $(lsof -t -i:3000) && kill -9 $(lsof -t -i:19000)
 ```
 
-### Weird typescript errors
-
-Open up any TypeScript file in the project and press...
-
-- <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Mac
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Windows
-
-Then restart the TypeScript server, with the command `TypeScript: Restart TS Server`.
+If that doesn't work, you can open Activity Monitor, search for `node` and kill all processes.
