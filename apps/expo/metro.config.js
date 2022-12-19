@@ -23,4 +23,9 @@ config.resolver.nodeModulesPaths = [
 // 3. Force Metro to resolve (sub)dependencies only from the `nodeModulesPaths`
 config.resolver.disableHierarchicalLookup = true;
 
+// Support for three.js assets (using `new Set` only to avoid duplicates)
+config.resolver.assetExts = Array.from(
+  new Set([...config.resolver.assetExts, "glb", "gltf", "png", "jpg"]),
+);
+
 module.exports = config;

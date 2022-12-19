@@ -23,7 +23,12 @@
     "syncpack:mismatches": "pnpm syncpack list-mismatches",
     "syncpack:fix": "pnpm syncpack fix-mismatches ; pnpm i",
     "i:native": "pnpm i --filter=expo --filter=app",
-    "skia:generate-canvaskit": "rm web/static/js/canvaskit.wasm ; pnpm setup-skia-web ; rm apps/next/plugins/canvaskit.wasm ; mv web/static/js/canvaskit.wasm apps/next/plugins/ ; rm -rf web"
+    "skia:generate-canvaskit": "rm web/static/js/canvaskit.wasm ; pnpm setup-skia-web ; rm apps/next/plugins/canvaskit.wasm ; mv web/static/js/canvaskit.wasm apps/next/plugins/ ; rm -rf web",
+    "dev:ios": "cd apps/expo && pnpm run ios ; cd ../..",
+    "dev:android": "cd apps/expo && pnpm run android ; cd ../..",
+    "dev:web": "cd apps/next && pnpm run dev",
+    "dev:web+ios": "pnpm run dev:web & pnpm run dev:ios",
+    "dev:web+android": "pnpm run dev:web & pnpm run dev:android"
   },
   "dependencies": {
     "@manypkg/cli": "^0.19.2",

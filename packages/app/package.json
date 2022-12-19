@@ -9,6 +9,7 @@
     "@clerk/clerk-react": "^4.6.4",
     "@clerk/nextjs": "^4.6.13",
     "@dripsy/gradient": "^3.8.1",
+    "@react-three/fiber": "^8.9.1",
     "@shopify/flash-list": "^1.4.0",
     "@shopify/react-native-skia": "^0.1.157",
     "@tanstack/react-query": "^4.20.4",
@@ -19,6 +20,8 @@
     "dripsy": "^3.8.1",
     "expo": "~47.0.8",
     "expo-constants": "^14.0.2",
+    "expo-device": "^5.0.0",
+    "expo-gl": "~12.0.1",
     "expo-linear-gradient": "^12.0.1",
     "expo-linking": "^3.2.3",
     "expo-location": "~15.0.1",
@@ -37,7 +40,11 @@
     "react-native-screens": "~3.18.2",
     "react-native-web": "~0.18.10",
     "solito": "^2.1.2",
+    "three": "^0.147.0",
     "zod": "^3.20.2"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/three": "^0.146.0"
+  }
 }

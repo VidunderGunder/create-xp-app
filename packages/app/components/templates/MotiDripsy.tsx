@@ -1,19 +1,23 @@
 import { forwardRef } from "react";
-import { View } from "dripsy";
-import type { View as ViewType } from "react-native";
+import { styled } from "dripsy";
+import { View } from "react-native";
 import { ComponentPropsWithoutRef } from "react";
+import { motify } from "moti";
+
+const MotiDripsyView = motify(styled(View)())();
 
 type Props = {
   // Custom props here
-} & ComponentPropsWithoutRef<typeof View>;
+} & ComponentPropsWithoutRef<typeof MotiDripsyView>;
+type Type = typeof MotiDripsyView;
 
 // ! Always rename the component name `RENAME_ME` to match the file name
-export default forwardRef<ViewType, Props>(function RENAME_ME(
+export default forwardRef<Type, Props>(function RENAME_ME(
   { children, sx, ...props },
   ref,
 ) {
   return (
-    <View
+    <MotiDripsyView
       ref={ref}
       {...props}
       sx={(theme) => ({
@@ -22,6 +26,6 @@ export default forwardRef<ViewType, Props>(function RENAME_ME(
       })}
     >
       {children}
-    </View>
+    </MotiDripsyView>
   );
 });

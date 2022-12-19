@@ -1,5 +1,6 @@
 import Text from "../components/design/Text";
 import View from "../components/design/View";
+import Three from "../components/examples/Three";
 import MainLayout from "../components/layouts/MainLayout";
 
 export default function HomeScreen() {
@@ -31,13 +32,7 @@ export default function HomeScreen() {
           alignItems: "center",
         }}
       >
-        <Text
-          sx={{
-            fontSize: 24,
-          }}
-        >
-          Hello, there!
-        </Text>
+        <Three />
       </View>
     </MainLayout>
   );

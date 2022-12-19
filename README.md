@@ -102,12 +102,13 @@ pnpm i:native react-native-reanimated
 
 ### Syncing native dependencies
 
-To sync the versions of all packages installed in both `📁 packages/app` and `📁 packages/expo`, you can use syncpack to check versions, find potential mismatches and then fix them:
+To sync the versions of all packages installed in both `📁 packages/app` and `📁 packages/expo`, you can use syncpack to find mismatching versions:
 
 ```sh
-pnpm syncpack:check
-pnpm syncpack:fix
+pnpm syncpack:mismatches
 ```
+
+You should fix these manually.
 
 If some packages are only installed in `📁 app/expo`, you'll need to add those to `📁 packages/app/package.json` manually.
 
@@ -118,6 +119,14 @@ const withTM = require("next-transpile-modules")([
   // Add the module here, e.g.:
   "recyclerlistview",
 ]);
+```
+
+#### Automatic syncing (☢️ WIP)
+
+You can use syncpack as a starting point (it's not setup to only pull versions from Expo, though, so it'll likely be wrong):
+
+```sh
+pnpm syncpack:fix
 ```
 
 ## 🔐 Authentication (☢️ WIP)
@@ -131,11 +140,10 @@ CLERK_BACKEND_API=...
 NEXT_PUBLIC_CLERK_FRONTEND_API=...
 ```
 
-## 3️⃣🍆 3D with Three.js (☢️ WIP)
+## 3️⃣🍆 3D with Three.js
 
-Three.js recently added support for React Native. Holy f\*ces.
-
-TODO: Install by following react-three-fiber's [installation guide](https://docs.pmnd.rs/react-three-fiber/getting-started/installation#react-native).
+NB: The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine.
+https://github.com/pmndrs/react-three-fiber/issues/2546
 
 ## 🤯 Facing problems?
 

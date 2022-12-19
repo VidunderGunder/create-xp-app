@@ -44,6 +44,8 @@ importers:
       eslint: ^8.30.0
       expo: ~47.0.8
       expo-constants: ^14.0.2
+      expo-device: ^5.0.0
+      expo-gl: ~12.0.1
       expo-linear-gradient: ^12.0.1
       expo-location: ~15.0.1
       expo-router: ^0.0.39
@@ -74,6 +76,8 @@ importers:
       dripsy: 3.8.1_tbxly36xa7xy4ktugpfic7dt6y
       expo: 47.0.8_@babel+core@7.20.5
       expo-constants: 14.0.2_expo@47.0.8
+      expo-device: 5.0.0_expo@47.0.8
+      expo-gl: 12.0.1_expo@47.0.8
       expo-linear-gradient: 12.0.1_expo@47.0.8
       expo-location: 15.0.1_expo@47.0.8
       expo-router: 0.0.39_2ssa7jg3ies6d4e362jyjzgpfm
@@ -169,16 +173,20 @@ importers:
       '@clerk/clerk-react': ^4.6.4
       '@clerk/nextjs': ^4.6.13
       '@dripsy/gradient': ^3.8.1
+      '@react-three/fiber': ^8.9.1
       '@shopify/flash-list': ^1.4.0
       '@shopify/react-native-skia': ^0.1.157
       '@tanstack/react-query': ^4.20.4
       '@trpc/client': ^10.5.0
       '@trpc/react-query': ^10.5.0
       '@trpc/server': ^10.5.0
+      '@types/three': ^0.146.0
       dayjs: ^1.11.7
       dripsy: ^3.8.1
       expo: ~47.0.8
       expo-constants: ^14.0.2
+      expo-device: ^5.0.0
+      expo-gl: ~12.0.1
       expo-linear-gradient: ^12.0.1
       expo-linking: ^3.2.3
       expo-location: ~15.0.1
@@ -197,6 +205,7 @@ importers:
       react-native-screens: ~3.18.2
       react-native-web: ~0.18.10
       solito: ^2.1.2
+      three: ^0.147.0
       zod: ^3.20.2
     dependencies:
       '@acme/api': link:../api
@@ -205,6 +214,7 @@ importers:
       '@clerk/clerk-react': 4.6.4_e2ahcdagsdonc2lnwoylqhejci
       '@clerk/nextjs': 4.6.13_7e2o6ech44aiwzntykx63d2bk4
       '@dripsy/gradient': 3.8.1_y66oxexqndivshvl2hocdocwte
+      '@react-three/fiber': 8.9.1_xj7cqdplxt4vlifxrtyrsafwuq
       '@shopify/flash-list': 1.4.0_gobv7lv6q6lez7bago6ecihika
       '@shopify/react-native-skia': 0.1.166_2oafm3sgx7pqh4qydgqdpg3v7e
       '@tanstack/react-query': 4.20.4_zao4d7y4bg52fxhszbjthuahle
@@ -215,6 +225,8 @@ importers:
       dripsy: 3.8.1_tbxly36xa7xy4ktugpfic7dt6y
       expo: 47.0.8_@babel+core@7.20.5
       expo-constants: 14.0.2_expo@47.0.8
+      expo-device: 5.0.0_expo@47.0.8
+      expo-gl: 12.0.1_expo@47.0.8
       expo-linear-gradient: 12.0.1_expo@47.0.8
       expo-linking: 3.2.3_expo@47.0.8
       expo-location: 15.0.1_expo@47.0.8
@@ -233,7 +245,10 @@ importers:
       react-native-screens: 3.18.2_tbxly36xa7xy4ktugpfic7dt6y
       react-native-web: 0.18.10_biqbaboplfbrettd7655fr4n2y
       solito: 2.1.2
+      three: 0.147.0
       zod: 3.20.2
+    devDependencies:
+      '@types/three': 0.146.0
 
   packages/auth:
     specifiers:
@@ -3533,6 +3548,44 @@ packages:
       nanoid: 3.3.4
     dev: false
 
+  /@react-three/fiber/8.9.1_xj7cqdplxt4vlifxrtyrsafwuq:
+    resolution: {integrity: sha512-xRMO9RGp0DkxSFu5BmmkjCxJ4r0dEpLobtxXdZwI0h2rZZaCnkPM5zThRN8xaZNbZhzRSVICeNOFaZltr9xFyQ==}
+    peerDependencies:
+      expo: '>=43.0'
+      expo-asset: '>=8.4'
+      expo-gl: '>=11.0'
+      react: '>=18.0'
+      react-dom: '>=18.0'
+      react-native: '>=0.64'
+      three: '>=0.133'
+    peerDependenciesMeta:
+      expo:
+        optional: true
+      expo-asset:
+        optional: true
+      expo-gl:
+        optional: true
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.20.6
+      '@types/react-reconciler': 0.26.7
+      expo: 47.0.8_@babel+core@7.20.5
+      expo-gl: 12.0.1_expo@47.0.8
+      its-fine: 1.0.8_react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-native: 0.71.0-rc.4_ildacul6tjko7jf3wnaev3ii3q
+      react-reconciler: 0.27.0_react@18.2.0
+      react-use-measure: 2.1.1_biqbaboplfbrettd7655fr4n2y
+      scheduler: 0.21.0
+      suspend-react: 0.0.8_react@18.2.0
+      three: 0.147.0
+      zustand: 3.7.2_react@18.2.0
+    dev: false
+
   /@rushstack/eslint-patch/1.2.0:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
     dev: true
@@ -3932,6 +3985,18 @@ packages:
       '@types/react': 18.0.26
     dev: true
 
+  /@types/react-reconciler/0.26.7:
+    resolution: {integrity: sha512-mBDYl8x+oyPX/VBb3E638N0B7xG+SPk/EAMcVPeexqus/5aTpTphQi0curhhshOqRrc9t6OPoJfEUkbymse/lQ==}
+    dependencies:
+      '@types/react': 18.0.26
+    dev: false
+
+  /@types/react-reconciler/0.28.0:
+    resolution: {integrity: sha512-5cjk9ottZAj7eaTsqzPUIlrVbh3hBAO2YaEL1rkjHKB3xNAId7oU8GhzvAX+gfmlfoxTwJnBjPxEHyxkEA1Ffg==}
+    dependencies:
+      '@types/react': 18.0.26
+    dev: false
+
   /@types/react/18.0.26:
     resolution: {integrity: sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==}
     dependencies:
@@ -3974,6 +4039,12 @@ packages:
     resolution: {integrity: sha512-ipixuVrh2OdNmauvtT51o3d8z12p6LtFW9in7U79der/kwejjdNchQC5UMn5u/KxNoM7VHHOs/l8KS8uHxhODQ==}
     dev: false
 
+  /@types/three/0.146.0:
+    resolution: {integrity: sha512-75AgysUrIvTCB054eQa2pDVFurfeFW8CrMQjpzjt3yHBfuuknoSvvsESd/3EhQxPrz9si3+P0wiDUVsWUlljfA==}
+    dependencies:
+      '@types/webxr': 0.5.0
+    dev: true
+
   /@types/uglify-js/3.17.1:
     resolution: {integrity: sha512-GkewRA4i5oXacU/n4MA9+bLgt5/L3F1mKrYvFGm7r2ouLXhRKjuWwo9XHNnbx6WF3vlGW21S3fCvgqxvxXXc5g==}
     dependencies:
@@ -3998,6 +4069,10 @@ packages:
       anymatch: 3.1.3
       source-map: 0.6.1
     dev: false
+
+  /@types/webxr/0.5.0:
+    resolution: {integrity: sha512-IUMDPSXnYIbEO2IereEFcgcqfDREOgmbGqtrMpVPpACTU6pltYLwHgVkrnYv0XhWEcjio9sYEfIEzgn3c7nDqA==}
+    dev: true
 
   /@types/ws/8.5.3:
     resolution: {integrity: sha512-6YOoWjruKj1uLf3INHH7D3qTXwFfEsg1kf3c0uDdSBJwfa/llkwIjrAGV7j7mVgGNbzTQ3HiHKKDXl6bJPD97w==}
@@ -5500,7 +5575,7 @@ packages:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 8.0.1
       tar: 6.1.13
@@ -6483,6 +6558,10 @@ packages:
 
   /dayjs/1.11.7:
     resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+    dev: false
+
+  /debounce/1.2.1:
+    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
     dev: false
 
   /debug/2.6.9:
@@ -7572,6 +7651,15 @@ packages:
       - supports-color
     dev: false
 
+  /expo-device/5.0.0_expo@47.0.8:
+    resolution: {integrity: sha512-FWlbOUMzAjHojLER8fnS42vLT7aqZ7IoEY+nw/RqmW17SA3GE2lzcYxRYZs1vAIgDnLzcS5CQMp08Eu+EXih1g==}
+    peerDependencies:
+      expo: '*'
+    dependencies:
+      expo: 47.0.8_@babel+core@7.20.5
+      ua-parser-js: 0.7.32
+    dev: false
+
   /expo-error-recovery/4.0.1_expo@47.0.8:
     resolution: {integrity: sha512-wceptnRX+N3qCSVTNbIchUFu3GmY30onRH5L66OF8HMLpAIQfrZMLxJfz7SAMJTcr3jxsJ11vSa2l2RaPKgHsQ==}
     requiresBuild: true
@@ -7598,6 +7686,15 @@ packages:
     dependencies:
       expo: 47.0.8_@babel+core@7.20.5
       fontfaceobserver: 2.3.0
+    dev: false
+
+  /expo-gl/12.0.1_expo@47.0.8:
+    resolution: {integrity: sha512-2lLvlh8Iw+HignariuGcDTEpglgBsIxUwE+yHqwwSPIBCbYHR3zKfg2E4kUnUw/yaGIl/tTKoWKArq1WLRQ4gg==}
+    peerDependencies:
+      expo: '*'
+    dependencies:
+      expo: 47.0.8_@babel+core@7.20.5
+      invariant: 2.2.4
     dev: false
 
   /expo-keep-awake/11.0.1_expo@47.0.8:
@@ -9515,6 +9612,15 @@ packages:
       html-escaper: 2.0.2
       istanbul-lib-report: 3.0.0
     dev: true
+
+  /its-fine/1.0.8_react@18.2.0:
+    resolution: {integrity: sha512-MagTA9/J6kN3aEQsQu6by3nyrttCm0whCOYo4SfiNzOfYgcr1cb29mJ3zgluaJboaWOL/lHzJeMXi/QGSCfX1Q==}
+    peerDependencies:
+      react: '>=18.0'
+    dependencies:
+      '@types/react-reconciler': 0.28.0
+      react: 18.2.0
+    dev: false
 
   /jest-changed-files/29.2.0:
     resolution: {integrity: sha512-qPVmLLyBmvF5HJrY7krDisx6Voi8DmlV3GZYX0aFNbaQsZeoz1hfxcCMbqDGuQCxU1dJy9eYc2xscE8QrCCYaA==}
@@ -12819,6 +12925,15 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: false
 
+  /promise-inflight/1.0.1:
+    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
+    peerDependencies:
+      bluebird: '*'
+    peerDependenciesMeta:
+      bluebird:
+        optional: true
+    dev: false
+
   /promise-inflight/1.0.1_bluebird@3.7.2:
     resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
     peerDependencies:
@@ -13383,6 +13498,17 @@ packages:
       react-is: 18.2.0
       react-shallow-renderer: 16.15.0_react@18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-use-measure/2.1.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-nocZhN26cproIiIduswYpV5y5lQpSQS1y/4KuvUCjSKmw7ZWIS/+g3aFnX3WdBkyuGUtTLif3UTqnLLhbDoQig==}
+    peerDependencies:
+      react: '>=16.13'
+      react-dom: '>=16.13'
+    dependencies:
+      debounce: 1.2.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react/18.2.0:
@@ -14730,6 +14856,14 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  /suspend-react/0.0.8_react@18.2.0:
+    resolution: {integrity: sha512-ZC3r8Hu1y0dIThzsGw0RLZplnX9yXwfItcvaIzJc2VQVi8TGyGDlu92syMB5ulybfvGLHAI5Ghzlk23UBPF8xg==}
+    peerDependencies:
+      react: '>=17.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /svgo/1.3.2:
     resolution: {integrity: sha512-yhy/sQYxR5BkC98CY7o31VGsg014AKLEPxdfhora76l36hD9Rdy5NZA/Ocn6yayNPgSamYdtX2rFJdcv07AYVw==}
     engines: {node: '>=4.0.0'}
@@ -14996,6 +15130,10 @@ packages:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
     dependencies:
       any-promise: 1.3.0
+    dev: false
+
+  /three/0.147.0:
+    resolution: {integrity: sha512-LPTOslYQXFkmvceQjFTNnVVli2LaVF6C99Pv34fJypp8NbQLbTlu3KinZ0zURghS5zEehK+VQyvWuPZ/Sm8fzw==}
     dev: false
 
   /throat/5.0.0:
@@ -16241,4 +16379,16 @@ packages:
 
   /zod/3.20.2:
     resolution: {integrity: sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==}
+    dev: false
+
+  /zustand/3.7.2_react@18.2.0:
+    resolution: {integrity: sha512-PIJDIZKtokhof+9+60cpockVOq05sJzHCriyvaLBmEJixseQ1a5Kdov6fWZfWOu5SK9c+FhH1jU0tntLxRJYMA==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      react: '>=16.8'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
     dev: false

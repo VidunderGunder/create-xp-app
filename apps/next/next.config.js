@@ -7,6 +7,9 @@ const withTM = require("next-transpile-modules")([
   "@shopify/flash-list",
   "recyclerlistview",
   "moti",
+  "three",
+  // "expo-gl",
+  // "react-native",
 ]);
 const withSourceMaps = require("@zeit/next-source-maps");
 const { withExpo } = require("@expo/next-adapter");
