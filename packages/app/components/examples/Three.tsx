@@ -37,7 +37,7 @@ function Box(props: BoxProps) {
 
 export type ThreeProps = {
   children?: React.ReactNode;
-} & CanvasProps;
+} & Partial<CanvasProps>;
 export type ThreeType = CanvasType;
 
 export default forwardRef<ThreeType, ThreeProps>(function Three(
