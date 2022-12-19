@@ -1,5 +1,4 @@
 {
-  "workbench.startupEditor": "readme",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -11,6 +10,8 @@
   "eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
   "typescript.tsdk": "node_modules/typescript/lib",
   "workbench.editorAssociations": {
-    "*.excalidraw": "editor.excalidraw"
-  }
+    "*.excalidraw": "editor.excalidraw",
+    "*.md": "vscode.markdown.preview.editor"
+  },
+  "workbench.startupEditor": "readme"
 }
