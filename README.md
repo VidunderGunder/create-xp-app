@@ -144,8 +144,8 @@ NEXT_PUBLIC_CLERK_FRONTEND_API=...
 
 ## 3️⃣🍆 3D with Three.js
 
-NB: The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine.
-https://github.com/pmndrs/react-three-fiber/issues/2546
+NB: The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine (see
+https://github.com/pmndrs/react-three-fiber/issues/2546).
 
 ## 🤯 Facing problems?
 
