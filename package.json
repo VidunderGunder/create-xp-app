@@ -27,6 +27,7 @@
     "dev:ios": "cd apps/expo && pnpm run ios ; cd ../..",
     "dev:android": "cd apps/expo && pnpm run android ; cd ../..",
     "dev:web": "cd apps/next && pnpm run dev",
+    "dev:web+expo": "pnpm run dev:web & cd apps/expo && pnpm run dev",
     "dev:web+ios": "pnpm run dev:web & pnpm run dev:ios",
     "dev:web+android": "pnpm run dev:web & pnpm run dev:android"
   },

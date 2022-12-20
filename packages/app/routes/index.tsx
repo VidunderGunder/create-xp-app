@@ -1,6 +1,6 @@
 import Text from "../components/design/Text";
 import View from "../components/design/View";
-import Three from "../components/examples/Three";
+import Three from "../components/SpinningCube";
 import MainLayout from "../components/layouts/MainLayout";
 
 export default function HomeScreen() {

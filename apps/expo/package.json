@@ -4,10 +4,13 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "dev": "pnpm ios & pnpm android",
+    "dev": "pnpm expo start",
+    "dev:clear": "pnpm ios --clear & pnpm android --clear",
     "clean": "rm -rf .expo .turbo node_modules",
     "android": "expo start --android --clear",
+    "android:clear": "expo start --android --clear",
     "ios": "expo start --ios --clear",
+    "ios:clear": "expo start --ios --clear",
     "lint": "eslint . --ext ts,tsx"
   },
   "dependencies": {

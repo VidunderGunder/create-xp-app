@@ -1,5 +1,5 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
-import Canvas, { CanvasProps, CanvasType } from "../../threejs/Canvas";
+import Canvas, { CanvasProps, CanvasType } from "../threejs/Canvas";
 import type { Mesh } from "three";
 import { useFrame } from "@react-three/fiber";
 
@@ -10,8 +10,10 @@ function Box(props: BoxProps) {
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
-  useFrame(() => {
-    if (mesh.current !== null) mesh.current.rotation.y += 0.01;
+  useFrame(({ clock }) => {
+    // if (mesh.current !== null) mesh.current.rotation.y += 0.01;
+    if (mesh.current !== null)
+      mesh.current.rotation.y = clock.getElapsedTime() * 0.69;
   });
 
   useEffect(() => {
