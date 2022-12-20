@@ -131,6 +131,15 @@ You can use syncpack as a starting point (it's not setup to only pull versions f
 pnpm syncpack:fix
 ```
 
+## 3️⃣🍆 3D with Three.js
+
+NB: The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine (see
+https://github.com/pmndrs/react-three-fiber/issues/2546).
+
+## 🎨 Skia - Amazing 2D Rendering (☢️ WIP)
+
+Implemented for iOS and Android, but Next.js is WIP atm.
+
 ## 🔐 Authentication (☢️ WIP)
 
 [Clerk](https://clerk.dev) handles authentication.
@@ -141,11 +150,6 @@ To enable, [create a Clerk account](https://dashboard.clerk.dev/sign-up), [add a
 CLERK_BACKEND_API=...
 NEXT_PUBLIC_CLERK_FRONTEND_API=...
 ```
-
-## 3️⃣🍆 3D with Three.js
-
-NB: The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine (see
-https://github.com/pmndrs/react-three-fiber/issues/2546).
 
 ## 🤯 Facing problems?
 
