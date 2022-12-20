@@ -5,7 +5,7 @@ import MainLayout from "../components/layouts/MainLayout";
 
 export default function HomeScreen() {
   return (
-    <MainLayout sx={{}}>
+    <MainLayout>
       <Text
         sx={{
           fontSize: 42,
@@ -30,6 +30,7 @@ export default function HomeScreen() {
           flexGrow: 1,
           justifyContent: "center",
           alignItems: "center",
+          maxHeight: "100%",
         }}
       >
         <Three />

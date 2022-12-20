@@ -58,7 +58,7 @@ export default forwardRef<ThreeType, ThreeProps>(function Three(
     <View
       ref={ref}
       sx={{
-        height: "100%",
+        flexGrow: 1,
         width: "100%",
         maxHeight: 420,
       }}
