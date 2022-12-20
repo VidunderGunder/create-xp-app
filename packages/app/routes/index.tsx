@@ -12,7 +12,7 @@ export default function HomeScreen() {
           fontWeight: "bold",
           textAlign: "center",
           paddingTop: 3,
-          paddingBottom: 4,
+          paddingBottom: 1,
         }}
       >
         Create{" "}

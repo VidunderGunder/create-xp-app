@@ -1,7 +1,8 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
-import Canvas, { CanvasProps, CanvasType } from "../threejs/Canvas";
+import Canvas from "../threejs/Canvas";
 import type { Mesh } from "three";
 import { useFrame } from "@react-three/fiber";
+import View, { ViewProps, ViewType } from "./design/View";
 
 type BoxProps = JSX.IntrinsicElements["mesh"];
 
@@ -37,10 +38,14 @@ function Box(props: BoxProps) {
   );
 }
 
+// export type ThreeProps = {
+//   children?: React.ReactNode;
+// } & Partial<CanvasProps>;
+// export type ThreeType = CanvasType;
 export type ThreeProps = {
   children?: React.ReactNode;
-} & Partial<CanvasProps>;
-export type ThreeType = CanvasType;
+} & Partial<ViewProps>;
+export type ThreeType = ViewType;
 
 export default forwardRef<ThreeType, ThreeProps>(function Three(
   { children, ...props },
@@ -50,11 +55,24 @@ export default forwardRef<ThreeType, ThreeProps>(function Three(
   ref,
 ) {
   return (
-    <Canvas ref={ref} {...props}>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Box position={[0, 0, 0]} />
-      {children}
-    </Canvas>
+    <View
+      ref={ref}
+      sx={{
+        height: "100%",
+        width: "100%",
+        maxHeight: 420,
+      }}
+      {...props}
+    >
+      <Canvas
+        // Adjust field of view
+        camera={{ fov: 30 }}
+      >
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box position={[0, 0, 0]} />
+        {children}
+      </Canvas>
+    </View>
   );
 });

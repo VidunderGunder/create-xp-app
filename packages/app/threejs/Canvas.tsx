@@ -1,15 +1,14 @@
 import { forwardRef } from "react";
 import { ComponentPropsWithoutRef } from "react";
 import { Canvas as ThreeJSCanvas } from ".";
-import { ViewType } from "../components/design/View";
 import { Platform } from "react-native";
 import { isDevice } from "expo-device";
 import View from "../components/design/View";
 import Text from "../components/design/Text";
-import { SxProp } from "dripsy";
+import type { View as ViewType } from "react-native";
 
 export type CanvasProps = {
-  sx?: SxProp;
+  // Custom props
 } & ComponentPropsWithoutRef<typeof ThreeJSCanvas>;
 export type CanvasType = ViewType;
 
