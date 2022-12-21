@@ -4,7 +4,6 @@
   "main": "index.ts",
   "dependencies": {
     "@acme/api": "0.1.0",
-    "@acme/shared": "0.1.0",
     "@clerk/clerk-expo": "^0.10.15",
     "@clerk/clerk-react": "^4.7.0",
     "@clerk/nextjs": "^4.6.14",
@@ -15,7 +14,6 @@
     "@tanstack/react-query": "^4.20.4",
     "@trpc/client": "^10.6.0",
     "@trpc/react-query": "^10.6.0",
-    "@trpc/server": "^10.6.0",
     "dayjs": "^1.11.7",
     "dripsy": "^3.8.1",
     "expo": "~47.0.8",

@@ -4,6 +4,7 @@ import { View, SafeAreaView } from "dripsy";
 import { SafeAreaView as SafeAreaViewType } from "react-native";
 import Navigation from "../Navigation";
 import Gradient from "../design/Gradient";
+import Logo from "../Logo";
 
 type Props = {
   noImage?: boolean;
@@ -31,11 +32,17 @@ export default forwardRef<SafeAreaViewType, Props>(function MainLayout(
             height: "100%",
             width: "100%",
             padding: 2,
-            position: "relative",
-            zIndex: 2,
           }}
         >
-          {children}
+          <Logo />
+          <View
+            sx={{
+              flexGrow: 1,
+              maxHeight: "100%",
+            }}
+          >
+            {children}
+          </View>
           <Navigation />
         </View>
       </SafeAreaView>

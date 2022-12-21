@@ -5,6 +5,14 @@ const theme = makeTheme({
   types: {
     reactNativeTypesOnly: true,
   },
+  buttons: {
+    default: {
+      backgroundColor: "$primary",
+      borderRadius: 4,
+      paddingVertical: 2,
+      paddingHorizontal: 3,
+    },
+  },
   text: {
     default: {
       fontSize: 16,

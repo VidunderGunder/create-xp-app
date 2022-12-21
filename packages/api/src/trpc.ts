@@ -1,5 +1,5 @@
 import { initTRPC, TRPCError } from "@trpc/server";
-import { type Context } from "./context";
+import type { Context } from "./context";
 import superjson from "superjson";
 
 const t = initTRPC.context<Context>().create({
@@ -10,7 +10,7 @@ const t = initTRPC.context<Context>().create({
 });
 
 const isAuthed = t.middleware(({ ctx, next }) => {
-  if (!ctx.session) {
+  if (!ctx.clerkuser) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
       message: "Not authenticated",
@@ -19,7 +19,7 @@ const isAuthed = t.middleware(({ ctx, next }) => {
 
   return next({
     ctx: {
-      session: ctx.session,
+      clerkuser: ctx.clerkuser,
     },
   });
 });

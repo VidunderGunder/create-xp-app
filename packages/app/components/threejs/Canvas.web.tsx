@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { ComponentPropsWithoutRef } from "react";
 import { Canvas as ThreeJSCanvas } from ".";
-import { ViewType } from "../components/design/View";
+import { ViewType } from "../design/View";
 import { SxProp } from "dripsy";
 
 export type CanvasProps = {

@@ -3,8 +3,8 @@ import { ComponentPropsWithoutRef } from "react";
 import { Canvas as ThreeJSCanvas } from ".";
 import { Platform } from "react-native";
 import { isDevice } from "expo-device";
-import View from "../components/design/View";
-import Text from "../components/design/Text";
+import View from "../design/View";
+import Text from "../design/Text";
 import type { View as ViewType } from "react-native";
 
 export type CanvasProps = {

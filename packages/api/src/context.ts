@@ -1,13 +1,14 @@
-import { getServerSession, type Session } from "@acme/auth";
 import { prisma } from "@acme/db";
 import { type inferAsyncReturnType } from "@trpc/server";
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
+import { clerkClient, getAuth } from "@clerk/nextjs/server";
+import { User } from "@clerk/nextjs/dist/api";
 
 /**
  * Replace this with an object if you want to pass things to createContextInner
  */
 type CreateContextOptions = {
-  session: Session | null;
+  clerkuser: User | null;
 };
 
 /** Use this helper for:
@@ -17,7 +18,7 @@ type CreateContextOptions = {
  */
 export const createContextInner = async (opts: CreateContextOptions) => {
   return {
-    session: opts.session,
+    clerkuser: opts.clerkuser,
     prisma,
   };
 };
@@ -27,10 +28,16 @@ export const createContextInner = async (opts: CreateContextOptions) => {
  * @link https://trpc.io/docs/context
  **/
 export const createContext = async (opts: CreateNextContextOptions) => {
-  const session = await getServerSession(opts);
+  async function getClerkUser() {
+    const { userId, claims } = getAuth(opts.req);
+    console.log(claims);
+    const user = userId ? await clerkClient.users.getUser(userId) : null;
+    return user;
+  }
+  const clerkuser = await getClerkUser();
 
   return await createContextInner({
-    session,
+    clerkuser,
   });
 };
 

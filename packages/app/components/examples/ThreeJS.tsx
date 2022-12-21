@@ -2,7 +2,7 @@ import { forwardRef, useEffect, useRef, useState } from "react";
 import Canvas from "../threejs/Canvas";
 import type { Mesh } from "three";
 import { useFrame } from "@react-three/fiber";
-import View, { ViewProps, ViewType } from "./design/View";
+import View, { ViewProps, ViewType } from "../design/View";
 
 type BoxProps = JSX.IntrinsicElements["mesh"];
 

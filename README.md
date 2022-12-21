@@ -26,12 +26,26 @@ pnpm i
 
 Keep going while the dependencies install
 
-[Provision a PostgreSQL database with Railway](https://railway.app/new) and get the database URL
+[Provision a PostgreSQL database with Railway](https://railway.app/new) and get the Postgres Connection URL
 
 In the project root, create a `.env` file with the following, and replace all `...`'s with your corresponding API keys:
 
 ```env
 DATABASE_URL=...
+```
+
+Setup your database:
+
+```bash
+pnpm db:generate
+pnpm db:push
+```
+
+To get authentication working, [Ccreate a Clerk account](https://dashboard.clerk.dev/sign-up), [add a Clerk application](https://dashboard.clerk.dev/apps/new) and set the Clerk API keys in the `.env` file:
+
+```env
+NEXT_PUBLIC_CLERK_FRONTEND_API=...
+CLERK_BACKEND_API=...
 ```
 
 Ensure you setup Expo to play nicely for your setup, by following [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo)'s [Expo setup guide](https://github.com/t3-oss/create-t3-turbo#configure-expo-dev-script).
@@ -54,17 +68,6 @@ Use `📁 threejs/Canvas.tsx` to automatically use the correct implementation fo
 > **Warning**  
 > The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine (see
 > https://github.com/pmndrs/react-three-fiber/issues/2546).
-
-## 🔐 Authentication
-
-[Clerk](https://clerk.dev) handles authentication.
-
-To enable, [create a Clerk account](https://dashboard.clerk.dev/sign-up), [add a Clerk application](https://dashboard.clerk.dev/apps/new) and set the Clerk API keys in the `.env` file:
-
-```env
-NEXT_PUBLIC_CLERK_FRONTEND_API=...
-CLERK_BACKEND_API=...
-```
 
 ## 🎨 Skia (☢️ WIP)
 

@@ -12,8 +12,9 @@
     "clean": "rm -rf node_modules",
     "clean:workspaces": "turbo clean",
     "clean:reinstall": "pnpm clean:workspaces ; pnpm i",
-    "db-generate": "turbo db-generate",
-    "db-push": "turbo db-push",
+    "db:generate": "turbo db:generate",
+    "db:push": "turbo db:push",
+    "db:sync": "pnpm db:generate ; pnpm db:push ; pnpm i",
     "dev": "turbo dev --parallel",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint && manypkg check",
@@ -23,13 +24,7 @@
     "syncpack:mismatches": "pnpm syncpack list-mismatches",
     "syncpack:fix": "pnpm syncpack fix-mismatches ; pnpm i",
     "i:native": "pnpm i --filter=expo --filter=app",
-    "skia:generate-canvaskit": "rm web/static/js/canvaskit.wasm ; pnpm setup-skia-web ; rm apps/next/plugins/canvaskit.wasm ; mv web/static/js/canvaskit.wasm apps/next/plugins/ ; rm -rf web",
-    "dev:ios": "cd apps/expo && pnpm run ios ; cd ../..",
-    "dev:android": "cd apps/expo && pnpm run android ; cd ../..",
-    "dev:web": "cd apps/next && pnpm run dev",
-    "dev:web+expo": "pnpm run dev:web & cd apps/expo && pnpm run dev",
-    "dev:web+ios": "pnpm run dev:web & pnpm run dev:ios",
-    "dev:web+android": "pnpm run dev:web & pnpm run dev:android"
+    "skia:generate-canvaskit": "rm web/static/js/canvaskit.wasm ; pnpm setup-skia-web ; rm apps/next/plugins/canvaskit.wasm ; mv web/static/js/canvaskit.wasm apps/next/plugins/ ; rm -rf web"
   },
   "dependencies": {
     "@manypkg/cli": "^0.19.2",

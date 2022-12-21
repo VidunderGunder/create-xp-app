@@ -15,8 +15,10 @@ import { Provider } from "@acme/app/provider";
 import Head from "next/head";
 import React from "react";
 import type { SolitoAppProps } from "solito";
+import { api } from "@acme/api/src/client/index.web";
+import { AppType } from "next/app";
 
-function MyApp({ Component, pageProps }: SolitoAppProps) {
+const MyApp: AppType = ({ Component, pageProps }: SolitoAppProps) => {
   return (
     <>
       <Head>
@@ -32,6 +34,6 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
       </Provider>
     </>
   );
-}
+};
 
-export default MyApp;
+export default api.withTRPC(MyApp);
