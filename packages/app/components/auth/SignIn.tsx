@@ -1,58 +1,87 @@
-import React from "react";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
-import { useSignIn } from "@clerk/clerk-expo";
-import { styles } from "./Styles";
+import { useAuth, useSignIn } from ".";
+import Button from "../design/Button";
+import View from "../design/View";
+import type { ViewProps, ViewType } from "../design/View";
+import { forwardRef, useState } from "react";
+import TextInput from "../design/TextInput";
+import Gap from "../design/Gap";
 
-export default function SignInScreen() {
+export type SignInType = ViewType;
+export type SignInProps = {
+  // Custom props here
+  onSuccess?: () => void;
+} & ViewProps;
+
+export default forwardRef<SignInType, SignInProps>(function SignIn(
+  { sx, onSuccess, ...props },
+  ref,
+) {
+  const { isSignedIn } = useAuth();
+  const [isLoading, setIsLoading] = useState(isSignedIn);
+
+  const [emailAddress, setEmailAddress] = useState("");
+  const [password, setPassword] = useState("");
+
   const { signIn, setSession, isLoaded } = useSignIn();
 
-  const [emailAddress, setEmailAddress] = React.useState("");
-  const [password, setPassword] = React.useState("");
-
   const onSignInPress = async () => {
-    if (!isLoaded) {
-      return;
-    }
+    if (!isLoaded) return;
 
     try {
+      console.log("signing in");
+
+      setIsLoading(true);
+
       const completeSignIn = await signIn.create({
         identifier: emailAddress,
         password,
       });
 
+      console.log(
+        "completeSignIn",
+        completeSignIn,
+        completeSignIn.createdSessionId,
+      );
+
       await setSession(completeSignIn.createdSessionId);
+
+      setIsLoading(false);
+      onSuccess?.();
     } catch (err) {
-      //LOG IT
+      // TODO: Error handling
     }
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.inputView}>
-        <TextInput
-          autoCapitalize="none"
-          value={emailAddress}
-          style={styles.textInput}
-          placeholder="Email..."
-          placeholderTextColor="#000"
-          onChangeText={(emailAddress) => setEmailAddress(emailAddress)}
-        />
-      </View>
-
-      <View style={styles.inputView}>
-        <TextInput
-          value={password}
-          style={styles.textInput}
-          placeholder="Password..."
-          placeholderTextColor="#000"
-          secureTextEntry={true}
-          onChangeText={(password) => setPassword(password)}
-        />
-      </View>
-
-      <TouchableOpacity style={styles.primaryButton} onPress={onSignInPress}>
-        <Text style={styles.primaryButtonText}>Sign in</Text>
-      </TouchableOpacity>
+    <View
+      ref={ref}
+      {...props}
+      sx={(theme) => ({
+        // Custom styles here
+        width: 269,
+        ...(typeof sx === "function" ? sx(theme) : sx),
+      })}
+    >
+      <TextInput
+        // disable on loading
+        editable={!isLoading}
+        autoCapitalize="none"
+        value={emailAddress}
+        placeholder="Email..."
+        onChangeText={(emailAddress) => setEmailAddress(emailAddress)}
+      />
+      <Gap />
+      <TextInput
+        editable={!isLoading}
+        value={password}
+        placeholder="Password..."
+        secureTextEntry={true}
+        onChangeText={(password) => setPassword(password)}
+      />
+      <Gap />
+      <Button onPress={onSignInPress} disabled={!isLoaded}>
+        Sign in
+      </Button>
     </View>
   );
-}
+});

@@ -1,12 +1,12 @@
 import { forwardRef } from "react";
 import View, { ViewProps, ViewType } from "../design/View";
 
-type RenameMeType = ViewType;
-type RenameMeProps = {
+export type CardType = ViewType;
+export type CardProps = {
   // Custom props here
 } & ViewProps;
 
-export default forwardRef<RenameMeType, RenameMeProps>(function RenameMe(
+export default forwardRef<CardType, CardProps>(function Card(
   { children, sx, ...props },
   ref,
 ) {
@@ -15,7 +15,9 @@ export default forwardRef<RenameMeType, RenameMeProps>(function RenameMe(
       ref={ref}
       {...props}
       sx={(theme) => ({
-        // Custom styles here
+        borderRadius: 10,
+        backgroundColor: "$white",
+        overflow: "hidden",
         ...(typeof sx === "function" ? sx(theme) : sx),
       })}
     >

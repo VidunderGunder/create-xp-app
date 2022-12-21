@@ -1,11 +1,13 @@
-import { forwardRef, useMemo } from "react";
+import { forwardRef, useMemo, useState } from "react";
 import { Platform } from "react-native";
 import Text from "./design/Text";
 import Button, { ButtonProps, ButtonType } from "./design/Button";
 import View from "./design/View";
 import type { ViewProps, ViewType } from "./design/View";
 import { useAuth } from "@clerk/clerk-react";
-import { useRouter } from "solito/router";
+import Modal from "./design/Modal";
+import SignIn from "./auth/SignIn";
+// import { useRouter } from "solito/router";
 
 type Props = {
   // Custom props here
@@ -17,33 +19,35 @@ export default forwardRef<ViewType, Props>(function Navigation(
   { sx, ...props },
   ref,
 ) {
-  const { push } = useRouter();
   const { isSignedIn, signOut } = useAuth();
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <View
-      ref={ref}
-      {...props}
-      sx={(theme) => ({
-        // Custom styles here
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        paddingBottom: extraPaddingOSs.includes(Platform.OS) ? 4 : 1,
-        ...(typeof sx === "function" ? sx(theme) : sx),
-      })}
-    >
-      {isSignedIn ? (
-        <NavigationButton onPress={signOut}>Sign Out</NavigationButton>
-      ) : (
-        <NavigationButton
-          onPress={() => {
-            push("/sign-in");
-          }}
-        >
-          Sign In
-        </NavigationButton>
-      )}
-    </View>
+    <>
+      <View
+        ref={ref}
+        {...props}
+        sx={(theme) => ({
+          // Custom styles here
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          paddingBottom: extraPaddingOSs.includes(Platform.OS) ? 4 : 1,
+          ...(typeof sx === "function" ? sx(theme) : sx),
+        })}
+      >
+        {isSignedIn ? (
+          <NavigationButton onPress={signOut}>Sign Out</NavigationButton>
+        ) : (
+          <NavigationButton onPress={() => setShowModal(true)}>
+            Sign In
+          </NavigationButton>
+        )}
+      </View>
+      <Modal visible={showModal} onHide={() => setShowModal(false)}>
+        <SignIn onSuccess={() => setShowModal(false)} />
+      </Modal>
+    </>
   );
 });
 

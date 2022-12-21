@@ -44,6 +44,7 @@ export default forwardRef<GradientType, GradientProps>(
     };
 
     useEffect(() => {
+      if (gradients.length <= 1) return;
       const interval = setInterval(toggle, duration);
       return () => clearInterval(interval);
     }, []);
@@ -55,7 +56,6 @@ export default forwardRef<GradientType, GradientProps>(
         ref={ref}
         {...props}
         sx={{
-          backgroundColor: theme.colors.$black,
           ...(typeof sx === "function" ? sx(theme) : sx),
           position: "absolute",
           top: 0,
@@ -78,7 +78,7 @@ export default forwardRef<GradientType, GradientProps>(
           <AnimatePresence initial={initial}>
             {/* View Wrapper necessary for Web to animate at all */}
             <View
-              key={gradient.join("-")}
+              key={gradients.length > 1 ? gradient.join("-") : "static"}
               from={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

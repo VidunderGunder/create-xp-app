@@ -1,12 +1,13 @@
 import { forwardRef } from "react";
-import View, { ViewProps, ViewType } from "../design/View";
+import { View } from "dripsy";
+import type { View as ViewType } from "react-native";
+import { ComponentPropsWithoutRef } from "react";
 
-type RenameMeType = ViewType;
-type RenameMeProps = {
+type Props = {
   // Custom props here
-} & ViewProps;
+} & ComponentPropsWithoutRef<typeof View>;
 
-export default forwardRef<RenameMeType, RenameMeProps>(function RenameMe(
+export default forwardRef<ViewType, Props>(function RENAME_ME(
   { children, sx, ...props },
   ref,
 ) {

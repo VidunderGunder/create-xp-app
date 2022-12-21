@@ -6,8 +6,15 @@ const theme = makeTheme({
     reactNativeTypesOnly: true,
   },
   text: {
+    default: {
+      fontSize: 16,
+    },
     p: {
       fontSize: 16,
+    },
+    button: {
+      fontSize: 16,
+      fontWeight: "bold",
     },
   },
   linearGradients: {
@@ -15,7 +22,7 @@ const theme = makeTheme({
   },
   colors: {
     $background: "#0e387b",
-    $primary: "#00ffdd",
+    $primary: "#04dfc1",
     $secondary: "#5811c9",
     $light: "#f5f5f5",
     $dark: "#1a1e2a",

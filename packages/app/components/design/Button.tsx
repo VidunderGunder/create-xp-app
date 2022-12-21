@@ -1,8 +1,10 @@
 import { forwardRef, useMemo } from "react";
-import { styled } from "dripsy";
+import { styled, useDripsyTheme } from "dripsy";
+import type { Sx } from "dripsy";
 import type { View as ViewType } from "react-native";
 import { ComponentPropsWithoutRef } from "react";
 import { MotiPressable } from "moti/interactions";
+import Text from "./Text";
 
 const DripsyMotiPressable = styled(MotiPressable)();
 
@@ -15,6 +17,14 @@ export default forwardRef<ViewType, ButtonProps>(function Button(
   { children, sx, ...props },
   ref,
 ) {
+  const { theme } = useDripsyTheme();
+  const TextButtonSX: Sx = {
+    opacity: props.disabled ? 0.69 : 1,
+    backgroundColor: theme.colors.$primary,
+    borderRadius: theme.text.button.fontSize * 0.4,
+    paddingHorizontal: 3,
+    paddingVertical: 2,
+  };
   return (
     <DripsyMotiPressable
       ref={ref}
@@ -34,10 +44,15 @@ export default forwardRef<ViewType, ButtonProps>(function Button(
       {...props}
       sx={(theme) => ({
         userSelect: "none",
+        ...(typeof children === "string" ? TextButtonSX : {}),
         ...(typeof sx === "function" ? sx(theme) : sx),
       })}
     >
-      {children}
+      {typeof children === "string" ? (
+        <Text variant="button">{children}</Text>
+      ) : (
+        children
+      )}
     </DripsyMotiPressable>
   );
 });

@@ -2,7 +2,7 @@ import { forwardRef, useMemo } from "react";
 import type { ComponentPropsWithoutRef } from "react";
 import { Image, styled, Text, View } from "dripsy";
 import type { View as ViewType } from "react-native";
-import Card from "./Card";
+import Card from "./design/Card";
 import { useAnimationState } from "moti";
 import { z } from "zod";
 import {

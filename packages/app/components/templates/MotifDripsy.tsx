@@ -4,20 +4,19 @@ import { View } from "react-native";
 import { ComponentPropsWithoutRef } from "react";
 import { motify } from "moti";
 
-const MotiDripsyView = motify(styled(View)())();
+const MotiDripsy = motify(styled(View)())();
 
-type Props = {
+type RenameMeProps = {
   // Custom props here
-} & ComponentPropsWithoutRef<typeof MotiDripsyView>;
-type Type = typeof MotiDripsyView;
+} & ComponentPropsWithoutRef<typeof MotiDripsy>;
+type RenameMeType = typeof MotiDripsy;
 
-// ! Always rename the component name `RENAME_ME` to match the file name
-export default forwardRef<Type, Props>(function RENAME_ME(
+export default forwardRef<RenameMeType, RenameMeProps>(function RenameMe(
   { children, sx, ...props },
   ref,
 ) {
   return (
-    <MotiDripsyView
+    <MotiDripsy
       ref={ref}
       {...props}
       sx={(theme) => ({
@@ -26,6 +25,6 @@ export default forwardRef<Type, Props>(function RENAME_ME(
       })}
     >
       {children}
-    </MotiDripsyView>
+    </MotiDripsy>
   );
 });
