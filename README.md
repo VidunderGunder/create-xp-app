@@ -131,24 +131,26 @@ You can use syncpack as a starting point (it's not setup to only pull versions f
 pnpm syncpack:fix
 ```
 
+## 🎨 Skia (☢️ WIP)
+
+[Skia](https://shopify.github.io/react-native-skia/) is a 2D graphics library that can be used to render really cool 2D graphics.
+
+Implemented for iOS and Android, but code sharing with Next.js is WIP atm.
+
 ## 3️⃣🍆 3D with Three.js
 
 NB: The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine (see
 https://github.com/pmndrs/react-three-fiber/issues/2546).
 
-## 🎨 Skia - Amazing 2D Rendering (☢️ WIP)
-
-Implemented for iOS and Android, but Next.js is WIP atm.
-
-## 🔐 Authentication (☢️ WIP)
+## 🔐 Authentication
 
 [Clerk](https://clerk.dev) handles authentication.
 
 To enable, [create a Clerk account](https://dashboard.clerk.dev/sign-up), [add a Clerk application](https://dashboard.clerk.dev/apps/new) and set the Clerk API keys in the `.env` file:
 
 ```env
-CLERK_BACKEND_API=...
 NEXT_PUBLIC_CLERK_FRONTEND_API=...
+CLERK_BACKEND_API=...
 ```
 
 ## 🤯 Facing problems?
