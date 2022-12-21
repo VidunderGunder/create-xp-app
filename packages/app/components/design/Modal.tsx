@@ -47,18 +47,10 @@ export default forwardRef<ModalType, ModalProps>(function Modal(
             sx={(theme) => ({
               maxWidth: "100%",
               margin: "auto",
-              backgroundColor: "transparent",
               padding: spacing,
               justifyContent: "center",
               alignItems: "center",
-              shadowColor: theme.colors.$black,
-              shadowOffset: {
-                width: 0,
-                height: 2,
-              },
-              shadowOpacity: 0.25,
-              shadowRadius: 8,
-              elevation: 5,
+              backgroundColor: "transparent",
               ...(typeof sx === "function" ? sx(theme) : sx),
             })}
           >
@@ -73,10 +65,6 @@ export default forwardRef<ModalType, ModalProps>(function Modal(
             >
               <Button
                 sx={{
-                  // No border radius on top left and bottom right
-                  borderTopLeftRadius: 0,
-                  borderBottomRightRadius: 0,
-                  borderBottomLeftRadius: 8,
                   backgroundColor: "transparent",
                   margin: 1,
                 }}
