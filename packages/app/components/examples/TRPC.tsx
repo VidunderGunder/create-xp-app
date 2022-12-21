@@ -103,6 +103,7 @@ export default forwardRef<TRPCType, TRPCProps>(function TRPC(
             <Text
               sx={{
                 fontSize: 10,
+                userSelect: "none",
               }}
             >
               Refresh
