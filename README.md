@@ -42,6 +42,35 @@ In your VSCode terminal, start development:
 pnpm dev
 ```
 
+## 3️⃣🍆 3D with Three.js
+
+[React Three Fiber](<[http](https://github.com/pmndrs/react-three-fiber)>) is used to render 3D graphics ([docs](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)).
+
+Use `📁 threejs/Canvas.tsx` to automatically use the correct implementation for the platform you're on (with consistent styling as bonus 😉), so that you get native rendering on iOS and Android, and web rendering on the web, but still code share everything.
+
+> You _can_ use the regular Canvas component from `react-three-fiber` if you _really_ want to (nice to have as a fallback), but you'll not get butter smooth animations and interactions on iOS and Android.
+
+> **Warning**
+> The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine (see
+> https://github.com/pmndrs/react-three-fiber/issues/2546).
+
+## 🔐 Authentication
+
+[Clerk](https://clerk.dev) handles authentication.
+
+To enable, [create a Clerk account](https://dashboard.clerk.dev/sign-up), [add a Clerk application](https://dashboard.clerk.dev/apps/new) and set the Clerk API keys in the `.env` file:
+
+```env
+NEXT_PUBLIC_CLERK_FRONTEND_API=...
+CLERK_BACKEND_API=...
+```
+
+## 🎨 Skia (☢️ WIP)
+
+[Skia](https://shopify.github.io/react-native-skia/) is a 2D graphics library that can be used to render really cool 2D graphics.
+
+Implemented for iOS and Android, but code sharing with Next.js is WIP atm.
+
 ## Quirks
 
 This is a monorepo using [Turborepo](https://turbo.build/repo) and [pnpm](https://pnpm.io/).
@@ -110,7 +139,7 @@ To sync the versions of all packages installed in both `📁 packages/app` and `
 pnpm syncpack:mismatches
 ```
 
-You should fix these manually.
+You should fix these manually or create a script that fits your workflow.
 
 If some packages are only installed in `📁 app/expo`, you'll need to add those to `📁 packages/app/package.json` manually.
 
@@ -121,36 +150,6 @@ const withTM = require("next-transpile-modules")([
   // Add the module here, e.g.:
   "recyclerlistview",
 ]);
-```
-
-#### Automatic syncing (☢️ WIP)
-
-You can use syncpack as a starting point (it's not setup to only pull versions from Expo, though, so it'll likely be wrong):
-
-```sh
-pnpm syncpack:fix
-```
-
-## 🎨 Skia (☢️ WIP)
-
-[Skia](https://shopify.github.io/react-native-skia/) is a 2D graphics library that can be used to render really cool 2D graphics.
-
-Implemented for iOS and Android, but code sharing with Next.js is WIP atm.
-
-## 3️⃣🍆 3D with Three.js
-
-NB: The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine (see
-https://github.com/pmndrs/react-three-fiber/issues/2546).
-
-## 🔐 Authentication
-
-[Clerk](https://clerk.dev) handles authentication.
-
-To enable, [create a Clerk account](https://dashboard.clerk.dev/sign-up), [add a Clerk application](https://dashboard.clerk.dev/apps/new) and set the Clerk API keys in the `.env` file:
-
-```env
-NEXT_PUBLIC_CLERK_FRONTEND_API=...
-CLERK_BACKEND_API=...
 ```
 
 ## 🤯 Facing problems?
