@@ -48,10 +48,10 @@ pnpm dev
 
 Use `📁 threejs/Canvas.tsx` to automatically use the correct implementation for the platform you're on (with consistent styling as bonus 😉), so that you get native rendering on iOS and Android, and web rendering on the web, but still code share everything.
 
-> **Note**
+> **Note**  
 > You _can_ use the regular Canvas component from `react-three-fiber` if you _really_ want to (nice to have as a fallback), but you'll not get butter smooth animations and interactions on iOS and Android.
 
-> **Warning**
+> **Warning**  
 > The iOS simulator does not render 3D at all (as of 2022.12.19), but real apple devices work just fine (see
 > https://github.com/pmndrs/react-three-fiber/issues/2546).
 
@@ -94,7 +94,7 @@ pnpm i -D <package> --filter=expo
 pnpm i -D <package> --filter=expo --filter=web
 ```
 
-> **Note**
+> **Note**  
 > My experience is that `pnpm i` with filtering works the same from anywhere in the project, but other commands, for example `package.json`-scripts like `pnpm dev`, may vary. This may be wrong, so feel free to correct me.
 
 To install packages using [Expo](https://docs.expo.io/) (maybe you want their [automatic versioning](https://docs.expo.dev/workflow/expo-cli/#install)), you need to specify location, by `cd`-ing in to the relevant directory.
@@ -106,7 +106,7 @@ cd packages/expo
 pnpx expo install expo-location
 ```
 
-> **Note**
+> **Note**  
 > When installing packages using Expo, the docs most often suggest `npx`, but as we're using `pnpm`, I recommend using `pnpx`, so:
 >
 > ❌ ~~`npx expo install expo-location`~~  
