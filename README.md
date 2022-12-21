@@ -48,6 +48,7 @@ pnpm dev
 
 Use `📁 threejs/Canvas.tsx` to automatically use the correct implementation for the platform you're on (with consistent styling as bonus 😉), so that you get native rendering on iOS and Android, and web rendering on the web, but still code share everything.
 
+> **Info**
 > You _can_ use the regular Canvas component from `react-three-fiber` if you _really_ want to (nice to have as a fallback), but you'll not get butter smooth animations and interactions on iOS and Android.
 
 > **Warning**
