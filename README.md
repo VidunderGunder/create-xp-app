@@ -24,7 +24,7 @@ Install dependencies:
 pnpm i
 ```
 
-> Keep going while the dependencies install
+Keep going while the dependencies install
 
 [Provision a PostgreSQL database with Railway](https://railway.app/new) and get the database URL
 
@@ -94,6 +94,7 @@ pnpm i -D <package> --filter=expo
 pnpm i -D <package> --filter=expo --filter=web
 ```
 
+> **Note**
 > My experience is that `pnpm i` with filtering works the same from anywhere in the project, but other commands, for example `package.json`-scripts like `pnpm dev`, may vary. This may be wrong, so feel free to correct me.
 
 To install packages using [Expo](https://docs.expo.io/) (maybe you want their [automatic versioning](https://docs.expo.dev/workflow/expo-cli/#install)), you need to specify location, by `cd`-ing in to the relevant directory.
@@ -105,6 +106,7 @@ cd packages/expo
 pnpx expo install expo-location
 ```
 
+> **Note**
 > When installing packages using Expo, the docs most often suggest `npx`, but as we're using `pnpm`, I recommend using `pnpx`, so:
 >
 > ❌ ~~`npx expo install expo-location`~~  
