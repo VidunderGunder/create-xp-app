@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import type { ComponentPropsWithoutRef } from "react";
 import { View, SafeAreaView } from "dripsy";
 import { SafeAreaView as SafeAreaViewType } from "react-native";
-import Navigation from "../Navigation";
+import Navigation from "../Menu";
 import Gradient from "../design/Gradient";
 import Logo from "../Logo";
 
@@ -31,7 +31,8 @@ export default forwardRef<SafeAreaViewType, Props>(function MainLayout(
           sx={{
             height: "100%",
             width: "100%",
-            padding: 2,
+            paddingHorizontal: 2,
+            paddingVertical: 30,
           }}
         >
           <Logo />

@@ -1,4 +1,9 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es2017",
@@ -17,5 +22,5 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true
   },
-  "include": [".eslintrc.cjs", "syncpack.config.cjs"]
+  "include": [".eslintrc.cjs", "syncpack.config.cjs", "scripts/"]
 }

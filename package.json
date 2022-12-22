@@ -11,16 +11,18 @@
     "build": "turbo build",
     "clean": "rm -rf node_modules",
     "clean:workspaces": "turbo clean",
-    "clean:reinstall": "pnpm clean:workspaces ; pnpm i",
     "db:generate": "turbo db:generate",
     "db:push": "turbo db:push",
-    "db:sync": "pnpm db:generate ; pnpm db:push ; pnpm i",
+    "db:seed": "turbo db:seed",
+    "db:setup": "pnpm db:generate ; pnpm db:push ; pnpm seed ; pnpm i",
+    "killports": "turbo killports",
     "dev": "turbo dev --parallel",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint && manypkg check",
     "type-check": "turbo type-check",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
+    "syncroutes": "turbo syncroutes",
     "syncpack:mismatches": "pnpm syncpack list-mismatches",
     "syncpack:fix": "pnpm syncpack fix-mismatches ; pnpm i",
     "i:native": "pnpm i --filter=expo --filter=app",
@@ -30,11 +32,17 @@
     "@manypkg/cli": "^0.19.2",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
+    "chalk": "^5.2.0",
+    "chokidar": "^3.5.3",
     "eslint": "^8.30.0",
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "syncpack": "^8.4.11",
     "turbo": "^1.6.3",
     "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
   }
 }

@@ -4,3 +4,4 @@ packages:
   - packages/app
   - packages/api
   - packages/db
+  - scripts

@@ -9,6 +9,10 @@
       "inputs": ["prisma/schema.prisma"],
       "cache": false
     },
+    "db:seed": {
+      "inputs": ["prisma/schema.prisma"],
+      "cache": false
+    },
     "dev": {
       "dependsOn": ["^db:generate"],
       "cache": false
@@ -34,6 +38,14 @@
       "outputs": []
     },
     "test:watch": {
+      "cache": false
+    },
+    "killports": {
+      "cache": false
+    },
+    "syncroutes": {
+      "inputs": ["../packages/app/routes/**"],
+      "outputs": ["../apps/expo/app/**", "../apps/next/app/**"],
       "cache": false
     }
   },

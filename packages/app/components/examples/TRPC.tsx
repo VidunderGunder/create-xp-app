@@ -23,9 +23,11 @@ export default forwardRef<TRPCType, TRPCProps>(function TRPC(
   { children, sx, ...props },
   ref,
 ) {
-  const message = api.example.databaseMessage.useQuery();
-  const secret = api.secret.secretMessage.useQuery();
   const { isSignedIn } = useAuth();
+  const message = api.example.databaseMessage.useQuery();
+  const secret = api.secret.secretMessage.useQuery(undefined, {
+    enabled: isSignedIn ?? false,
+  });
 
   function refresh() {
     message.remove();
@@ -75,7 +77,7 @@ export default forwardRef<TRPCType, TRPCProps>(function TRPC(
               paddingHorizontal: 12,
             }}
           >
-            ...but kept something secret
+            ...and kept something secret
           </Text>
         ) : null}
         <View

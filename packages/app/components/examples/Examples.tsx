@@ -1,4 +1,7 @@
 import { forwardRef } from "react";
+import { useRouter } from "solito/router";
+import Button from "../design/Button";
+import Gap from "../design/Gap";
 import View, { ViewProps, ViewType } from "../design/View";
 import ThreeJS from "./ThreeJS";
 import TRPC from "./TRPC";
@@ -8,10 +11,13 @@ type RenameMeProps = {
   // Custom props here
 } & ViewProps;
 
+const gap = 40;
+
 export default forwardRef<RenameMeType, RenameMeProps>(function RenameMe(
   { children, sx, ...props },
   ref,
 ) {
+  const router = useRouter();
   return (
     <View
       ref={ref}
@@ -25,7 +31,16 @@ export default forwardRef<RenameMeType, RenameMeProps>(function RenameMe(
       })}
     >
       <ThreeJS />
+      <Gap size={gap} />
       <TRPC />
+      <Gap size={gap} />
+      <Button
+        onPress={() => {
+          router.push("/example");
+        }}
+      >
+        Go to example route
+      </Button>
       {children}
     </View>
   );

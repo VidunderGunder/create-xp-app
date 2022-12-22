@@ -6,6 +6,8 @@ import View, { ViewProps, ViewType } from "../design/View";
 
 type BoxProps = JSX.IntrinsicElements["mesh"];
 
+const boxSize = 1.675;
+
 function Box(props: BoxProps) {
   const mesh = useRef<Mesh>(null);
   const [hovered, setHover] = useState(false);
@@ -30,7 +32,7 @@ function Box(props: BoxProps) {
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}
     >
-      <boxGeometry args={[1, 1, 1]} />
+      <boxGeometry args={[boxSize, boxSize, boxSize]} />
       <meshStandardMaterial
         color={active ? "red" : hovered ? "hotpink" : "orange"}
       />
@@ -60,7 +62,7 @@ export default forwardRef<ThreeType, ThreeProps>(function Three(
       sx={{
         flexGrow: 1,
         width: "100%",
-        maxHeight: 420,
+        maxHeight: 250,
       }}
       {...props}
     >

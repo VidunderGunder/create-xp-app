@@ -22,7 +22,7 @@ export default forwardRef<LogoType, LogoProps>(function Logo(
     >
       <Text
         sx={{
-          fontSize: 42,
+          fontSize: [42, null, 90],
           fontWeight: "bold",
           textAlign: "center",
           paddingTop: 3,

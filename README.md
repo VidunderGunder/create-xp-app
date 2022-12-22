@@ -28,6 +28,8 @@ Keep going while the dependencies install
 
 [Provision a PostgreSQL database with Railway](https://railway.app/new) and get the Postgres Connection URL
 
+![DB Url](resources/db-url.png)
+
 In the project root, create a `.env` file with the following, and replace all `...`'s with your corresponding API keys:
 
 ```env
@@ -37,11 +39,10 @@ DATABASE_URL=...
 Setup your database:
 
 ```bash
-pnpm db:generate
-pnpm db:push
+pnpm db:setup
 ```
 
-To get authentication working, [Ccreate a Clerk account](https://dashboard.clerk.dev/sign-up), [add a Clerk application](https://dashboard.clerk.dev/apps/new) and set the Clerk API keys in the `.env` file:
+To get authentication working, [create a Clerk account](https://dashboard.clerk.dev/sign-up), [add a Clerk application](https://dashboard.clerk.dev/apps/new) and set the Clerk API keys in the `.env` file:
 
 ```env
 NEXT_PUBLIC_CLERK_FRONTEND_API=...
