@@ -27,7 +27,7 @@ function Box(props: BoxProps) {
     <mesh
       {...props}
       ref={mesh}
-      scale={active ? 1.5 : 1}
+      scale={active ? 0.9 : 1}
       onClick={() => setActive(!active)}
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}
