@@ -61,7 +61,10 @@ pagesDirs.forEach((pagesDir) => {
 function generateFileContent(relativePath: string, fileName: string) {
   return [
     autoMessage,
-    `export { default } from "@acme/app/routes/${relativePath}/${fileName}";`,
+    `export { default } from "@acme/app/routes/${relativePath}/${fileName}";`.replaceAll(
+      "//",
+      "/",
+    ),
   ].join("\n");
 }
 
