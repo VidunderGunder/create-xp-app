@@ -14,7 +14,6 @@ function Box(props: BoxProps) {
   const [active, setActive] = useState(false);
 
   useFrame(({ clock }) => {
-    // if (mesh.current !== null) mesh.current.rotation.y += 0.01;
     if (mesh.current !== null)
       mesh.current.rotation.y = clock.getElapsedTime() * 0.69;
   });
@@ -40,10 +39,6 @@ function Box(props: BoxProps) {
   );
 }
 
-// export type ThreeProps = {
-//   children?: React.ReactNode;
-// } & Partial<CanvasProps>;
-// export type ThreeType = CanvasType;
 export type ThreeProps = {
   children?: React.ReactNode;
 } & Partial<ViewProps>;
