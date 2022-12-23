@@ -20,7 +20,6 @@ export default forwardRef<ViewType, ViewProps>(function View(
       ref={ref}
       sx={(theme) => ({
         // Custom styles here
-        color: theme.colors.$white,
         ...(typeof sx === "function" ? sx(theme) : sx),
       })}
       {...props}
