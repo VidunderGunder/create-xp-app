@@ -30,7 +30,6 @@ export const createContextInner = async (opts: CreateContextOptions) => {
 export const createContext = async (opts: CreateNextContextOptions) => {
   async function getClerkUser() {
     const { userId, claims } = getAuth(opts.req);
-    console.log(claims);
     const user = userId ? await clerkClient.users.getUser(userId) : null;
     return user;
   }

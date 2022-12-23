@@ -7,8 +7,6 @@ function range(start: number, end: number): number[] {
 const ports: number[] = [...range(3000, 3010), 19000, 5556];
 
 const _platform = platform();
-console.log(`OS: ${_platform}`);
-
 for (const port of ports) {
   try {
     if (_platform === "darwin") {
