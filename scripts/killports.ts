@@ -6,17 +6,18 @@ function range(start: number, end: number): number[] {
 }
 const ports: number[] = [...range(3000, 3010), 19000, 5556];
 
+const _platform = platform();
+console.log(`OS: ${_platform}`);
+
 for (const port of ports) {
   try {
-    if (platform() === "darwin") {
+    if (_platform === "darwin") {
       // Mac OS
-      execSync(
-        `lsof -i TCP:${port} | grep LISTEN | awk '{print $2}' | xargs kill`,
-      );
-    } else if (platform() === "linux") {
+      execSync(`lsof -ti:${port} | xargs kill -9`);
+    } else if (_platform === "linux") {
       // Linux
       execSync(`fuser -k ${port}/tcp`);
-    } else if (platform() === "win32") {
+    } else if (_platform === "win32") {
       // Windows
       execSync(
         `taskkill /F /PID $(netstat -ano | grep ${port} | awk '{print $5}')`,

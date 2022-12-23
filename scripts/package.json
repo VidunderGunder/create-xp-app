@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "main": "index.ts",
   "scripts": {
+    "clean": "rm -rf .turbo node_modules",
     "syncroutes": "ts-node syncroutes.ts",
     "dev": "ts-node syncroutes-watcher.ts",
+    "killports": "ts-node killports.ts",
     "dev-legacy": "nodemon --watch '../packages/app/routes/**' --ext 'tsx' tsx --exec 'pnpm syncroutes'"
   },
   "dependencies": {
