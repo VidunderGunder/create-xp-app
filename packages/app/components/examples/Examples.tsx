@@ -6,14 +6,14 @@ import View, { ViewProps, ViewType } from "../design/View";
 import ThreeJS from "./ThreeJS";
 import TRPC from "./TRPC";
 
-type RenameMeType = ViewType;
-type RenameMeProps = {
+type ExamplesType = ViewType;
+type ExamplesProps = {
   // Custom props here
 } & ViewProps;
 
 const gap = 40;
 
-export default forwardRef<RenameMeType, RenameMeProps>(function RenameMe(
+export default forwardRef<ExamplesType, ExamplesProps>(function Examples(
   { children, sx, ...props },
   ref,
 ) {
