@@ -2,7 +2,21 @@
 
 # Create XP App
 
-A cross-platform app starter based on [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo) and [all things Fernando Rojo](https://github.com/nandorojo) ([Solito](https://solito.dev/), [Dripsy](https://www.dripsy.xyz/), [Moti](https://moti.fyi/), etc.). Authentication is inspired by [create-t3-turbolito](https://github.com/ebg1223/create-t3-turbolito).
+Plug-n-play app template to write code only once, and have it run on iOS, Android and Web.
+
+Key features:
+
+- [Expo](https://expo.dev/) for native iOS and Android
+- [Next.js](https://nextjs.org/) for web
+- [Solito](https://solito.dev/) for code sharing
+- [Dripsy](https://www.dripsy.xyz/) + [Moti](https://moti.fyi/) for styling and animations
+- [NativeWind](https://www.nativewind.dev/) for alternative styling
+- [Three.js](https://threejs.org/) for 3D graphics
+- [Skia](https://shopify.github.io/react-native-skia/) for 2D graphics
+- [Clerk](https://clerk.dev/) for authentication
+- [Prisma](https://www.prisma.io/) + [tRPC](https://trpc.io/) for backend
+
+_Based on [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo) and [all things Fernando Rojo](https://github.com/nandorojo) ([Solito](https://solito.dev/), [Dripsy](https://www.dripsy.xyz/), [Moti](https://moti.fyi/), etc.). Authentication is inspired by [create-t3-turbolito](https://github.com/ebg1223/create-t3-turbolito). Huge thanks <3._
 
 ## 🚀 Getting Started
 
