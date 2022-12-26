@@ -24,7 +24,7 @@ I created this to have a solid foundation for my own projects, that will allow m
 
 The philosophy behind it is that having fun and powerful tools at hand will allow you to play around and create cool stuff. You can clean up and do optimizations later on.
 
-Most of the time you just need an inspiring prototype, and this project will help you get there.
+Sometimes you just need an inspiring prototype, and this project will help you get there.
 
 ## 🚀 Getting Started
 
