@@ -197,8 +197,9 @@ Below are ways to solve them.
 ### Generally
 
 1. Restart VSCode.
-2. Clean and reinstall dependencies:  
-   `pnpm clean:reinstall`
+2. Clean the project and reinstall dependencies:  
+   `pnpm clean:workspaces`  
+   `pnpm i`
 3. Restart your computer.
 
 ### Scripts not running properly?
