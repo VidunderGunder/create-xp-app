@@ -199,6 +199,10 @@ Below are ways to solve them.
    `pnpm clean:reinstall`
 3. Restart your computer.
 
+### Scripts not running properly?
+
+Some terminals don't support chaining commands with `&&`, `||`, `;`, and so on, so you may need to run them separately. Checkout the `package.json`-scripts to see how they are setup and run them in the same order.
+
 ### Permission errors when running commands (Mac/Linux)
 
 Prefix the command with `sudo`, e.g.:
