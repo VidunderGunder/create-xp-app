@@ -1,8 +1,8 @@
 import { useRouter } from "solito/router";
-import Button from "../components/design/Button";
-import Gap from "../components/design/Gap";
-import Text from "../components/design/Text";
-import View from "../components/design/View";
+import Button from "../components/moti-dripsy/Button";
+import Gap from "../components/moti-dripsy/Gap";
+import Text from "../components/moti-dripsy/Text";
+import View from "../components/moti-dripsy/View";
 
 import MainLayout from "../components/layouts/MainLayout";
 

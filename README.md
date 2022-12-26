@@ -58,6 +58,14 @@ In your VSCode terminal, start development:
 pnpm dev
 ```
 
+## 👨‍🎨 Styling
+
+You can style a component using either [NativeWind](https://www.nativewind.dev/) or [Dripsy](https://www.dripsy.xyz/) + [Moti](https://moti.fyi/).
+
+NativeWind is quick and nimble, while Dripsy + Moti will give you more fine-grained control and animations.
+
+Feel free to combine them as you see fit, but keep in mind that they are not properly setup to work seamlessly together.
+
 ## 3️⃣🍆 3D with Three.js
 
 [React Three Fiber](<[http](https://github.com/pmndrs/react-three-fiber)>) is used to render 3D graphics ([docs](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)).
@@ -234,12 +242,10 @@ Then restart the TypeScript server, with the command `TypeScript: Restart TS Ser
 git config pull.rebase false
 ```
 
-### Ports already in use (Mac)
+### Ports already in use
 
 Kill the processes using the ports:
 
 ```bash
-kill -9 $(lsof -t -i:3000) && kill -9 $(lsof -t -i:19000)
+pnpm killports
 ```
-
-If that doesn't work, you can open Activity Monitor, search for `node` and kill all processes.

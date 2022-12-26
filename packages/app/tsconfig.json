@@ -5,9 +5,13 @@
     "next-env.d.ts",
     "index.ts",
     "rnw-overrides.d.ts",
+    "**/*.js",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.mjs"
+    "**/*.mjs",
+    "tailwind.js",
+    "tailwind.config.js",
+    "postcss.config.js"
   ]
 }

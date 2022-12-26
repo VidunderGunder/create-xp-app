@@ -8,6 +8,7 @@ const withTM = require("next-transpile-modules")([
   "recyclerlistview",
   "moti",
   "three",
+  'nativewind',
   // "expo-gl",
   // "react-native",
 ]);

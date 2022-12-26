@@ -1,11 +1,11 @@
 import { forwardRef, useMemo, useState } from "react";
 import { Platform } from "react-native";
-import Text from "./design/Text";
-import Button, { ButtonProps, ButtonType } from "./design/Button";
-import View from "./design/View";
-import type { ViewProps, ViewType } from "./design/View";
+import Text from "./moti-dripsy/Text";
+import Button, { ButtonProps, ButtonType } from "./moti-dripsy/Button";
+import View from "./moti-dripsy/View";
+import type { ViewProps, ViewType } from "./moti-dripsy/View";
 import { useAuth } from "@clerk/clerk-react";
-import Modal from "./design/Modal";
+import Modal from "./moti-dripsy/Modal";
 import SignIn from "./auth/SignIn";
 // import { useRouter } from "solito/router";
 

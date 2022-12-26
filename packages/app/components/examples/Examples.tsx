@@ -1,8 +1,9 @@
 import { forwardRef } from "react";
 import { useRouter } from "solito/router";
-import Button from "../design/Button";
-import Gap from "../design/Gap";
-import View, { ViewProps, ViewType } from "../design/View";
+import Button from "../moti-dripsy/Button";
+import Gap from "../moti-dripsy/Gap";
+import View, { ViewProps, ViewType } from "../moti-dripsy/View";
+import NativeWind from "./NativeWind";
 import ThreeJS from "./ThreeJS";
 import TRPC from "./TRPC";
 
@@ -34,12 +35,14 @@ export default forwardRef<ExamplesType, ExamplesProps>(function Examples(
       <Gap size={gap} />
       <TRPC />
       <Gap size={gap} />
+      <NativeWind />
+      <Gap size={gap} />
       <Button
         onPress={() => {
           router.push("/example");
         }}
       >
-        Go to example route
+        ➡️ Go to example route
       </Button>
       {children}
     </View>

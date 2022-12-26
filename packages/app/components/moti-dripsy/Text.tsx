@@ -6,6 +6,7 @@ import { ComponentPropsWithoutRef } from "react";
 export type TextProps = {
   // Custom props here
 } & ComponentPropsWithoutRef<typeof Text>;
+
 export type TextType = _TextType;
 export default forwardRef<TextType, TextProps>(function RENAME_ME(
   { children, sx, ...props },

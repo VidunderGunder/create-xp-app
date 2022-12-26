@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import View, { ViewProps, ViewType } from "../design/View";
+import View, { ViewProps, ViewType } from "./View";
 
 export type CardType = ViewType;
 export type CardProps = {

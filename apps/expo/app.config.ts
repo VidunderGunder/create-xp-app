@@ -2,10 +2,10 @@ import { ExpoConfig, ConfigContext } from "expo/config";
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: "weather-app",
-  slug: "weather-app",
+  name: "xp-app",
+  slug: "xp-app",
   version: "1.0.0",
-  scheme: "weather-app",
+  scheme: "xp-app",
   platforms: ["ios", "android"],
   orientation: "portrait",
   icon: "./assets/icon.png",

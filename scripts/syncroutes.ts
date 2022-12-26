@@ -59,9 +59,10 @@ pagesDirs.forEach((pagesDir) => {
 });
 
 function generateFileContent(relativePath: string, fileName: string) {
+  const fileNameWithoutExtensions = fileName.replace(extensionsToInclude, "");
   return [
     autoMessage,
-    `export { default } from "@acme/app/routes/${relativePath}/${fileName}";`.replaceAll(
+    `export { default } from "@acme/app/routes/${relativePath}/${fileNameWithoutExtensions}";`.replaceAll(
       "//",
       "/",
     ),

@@ -12,6 +12,7 @@
     "metro.config.js",
     "app-env.d.ts",
     "babel.config.js",
-    "app.config.ts"
+    "app.config.ts",
+    "tailwind.config.js"
   ]
 }

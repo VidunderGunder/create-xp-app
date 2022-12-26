@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import View, { ViewProps, ViewType } from "./design/View";
-import Text from "./design/Text";
+import View, { ViewProps, ViewType } from "./moti-dripsy/View";
+import Text from "./moti-dripsy/Text";
 
 type LogoType = ViewType;
 type LogoProps = {

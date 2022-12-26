@@ -1,11 +1,14 @@
 import { forwardRef } from "react";
-import View, { ViewProps, ViewType } from "../design/View";
+import View, { ViewProps, ViewType } from "../moti-dripsy/View";
 
 type RenameMeType = ViewType;
 type RenameMeProps = {
   // Custom props here
 } & ViewProps;
 
+/**
+ * Starter for a View using Dripsy + Moti that I most often use.
+ */
 export default forwardRef<RenameMeType, RenameMeProps>(function RenameMe(
   { children, sx, ...props },
   ref,

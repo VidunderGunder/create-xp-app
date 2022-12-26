@@ -1,11 +1,11 @@
 import { forwardRef } from "react";
-import Card from "../design/Card";
-import Gradient from "../design/Gradient";
-import Text from "../design/Text";
-import View, { ViewProps, ViewType } from "../design/View";
+import Card from "../moti-dripsy/Card";
+import Gradient from "../moti-dripsy/Gradient";
+import Text from "../moti-dripsy/Text";
+import View, { ViewProps, ViewType } from "../moti-dripsy/View";
 import { api } from "@acme/api/src/client";
 import { useAuth } from "@clerk/clerk-react";
-import Button from "../design/Button";
+import Button from "../moti-dripsy/Button";
 import { type Sx } from "dripsy";
 
 type TRPCType = ViewType;

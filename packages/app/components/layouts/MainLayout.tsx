@@ -3,7 +3,7 @@ import type { ComponentPropsWithoutRef } from "react";
 import { View, SafeAreaView } from "dripsy";
 import { SafeAreaView as SafeAreaViewType } from "react-native";
 import Navigation from "../Menu";
-import Gradient from "../design/Gradient";
+import Gradient from "../moti-dripsy/Gradient";
 import Logo from "../Logo";
 
 type Props = {

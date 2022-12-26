@@ -11,6 +11,7 @@ const fixReanimatedIssue = () => {
 
 fixReanimatedIssue();
 
+import "../tailwind.css";
 import { Provider } from "@acme/app/provider";
 import Head from "next/head";
 import React from "react";

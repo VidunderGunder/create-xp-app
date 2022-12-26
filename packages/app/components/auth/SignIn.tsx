@@ -1,10 +1,10 @@
 import { useAuth, useSignIn } from ".";
-import Button from "../design/Button";
-import View from "../design/View";
-import type { ViewProps, ViewType } from "../design/View";
+import Button from "../moti-dripsy/Button";
+import View from "../moti-dripsy/View";
+import type { ViewProps, ViewType } from "../moti-dripsy/View";
 import { forwardRef, useState } from "react";
-import TextInput from "../design/TextInput";
-import Gap from "../design/Gap";
+import TextInput from "../moti-dripsy/TextInput";
+import Gap from "../moti-dripsy/Gap";
 
 export type SignInType = ViewType;
 export type SignInProps = {

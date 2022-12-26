@@ -11,6 +11,11 @@ type RenameMeProps = {
 } & ComponentPropsWithoutRef<typeof MotiDripsy>;
 type RenameMeType = typeof MotiDripsy;
 
+/**
+ * Starter for any component you wish to use Moti and Dripsy with.
+ * 
+ * Replace the imported `View` with any component you wish to use.
+ */
 export default forwardRef<RenameMeType, RenameMeProps>(function RenameMe(
   { children, sx, ...props },
   ref,

@@ -13,5 +13,6 @@
     "*.excalidraw": "editor.excalidraw",
     "*.md": "vscode.markdown.preview.editor"
   },
-  "workbench.startupEditor": "readme"
+  "workbench.startupEditor": "readme",
+  "tailwindCSS.classAttributes": ["className", "tw"]
 }
