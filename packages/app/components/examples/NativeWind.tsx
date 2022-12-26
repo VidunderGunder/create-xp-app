@@ -15,7 +15,7 @@ export default forwardRef<View, Props>(function NativeWind(
       <View
         ref={ref}
         {...props}
-        tw="bo bg-emerald-400 p-5 rounded-lg max-w-xs text-center"
+        tw="bg-emerald-400 p-5 rounded-lg max-w-xs items-center"
       >
         <Text tw="text-white">This is a NativeWind component</Text>
         <Text tw="text-white">The rest is Dripsy + Moti</Text>
