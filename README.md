@@ -20,7 +20,9 @@ _Based on [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo) and [all 
 
 ## 🧠 Philosophy
 
-I created this to have a solid foundation for my own projects, that will allow me to get inspired and create applications quickly. The philosophy behind this project is a bit more playful than the ones it's based on; having fun and powerful tools at hand will allow you to play around and create cool stuff. You can clean up and optimize later.
+I created this to have a solid foundation for my own projects, that will allow me to get inspired and create applications quickly.
+
+The philosophy behind it is that having fun and powerful tools at hand will allow you to play around and create cool stuff. You can clean up and do optimizations later on.
 
 Most of the time you just need an inspiring prototype, and this project will help you get there.
 
