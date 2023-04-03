@@ -5,6 +5,7 @@ import type { ViewProps, ViewType } from "../moti-dripsy/View";
 import { forwardRef, useState } from "react";
 import TextInput from "../moti-dripsy/TextInput";
 import Gap from "../moti-dripsy/Gap";
+import { Text } from "react-native";
 
 export type SignInType = ViewType;
 export type SignInProps = {
@@ -21,6 +22,7 @@ export default forwardRef<SignInType, SignInProps>(function SignIn(
 
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const { signIn, setSession, isLoaded } = useSignIn();
 
@@ -29,7 +31,7 @@ export default forwardRef<SignInType, SignInProps>(function SignIn(
 
     try {
       console.log("signing in");
-
+      setError("");
       setIsLoading(true);
 
       const completeSignIn = await signIn.create({
@@ -48,7 +50,9 @@ export default forwardRef<SignInType, SignInProps>(function SignIn(
       setIsLoading(false);
       onSuccess?.();
     } catch (err) {
-      // TODO: Error handling
+      console.error(err);
+      setError(JSON.stringify(err));
+      setIsLoading(false);
     }
   };
 
@@ -79,6 +83,7 @@ export default forwardRef<SignInType, SignInProps>(function SignIn(
         onChangeText={(password) => setPassword(password)}
       />
       <Gap />
+      <Text>{error}</Text>
       <Button onPress={onSignInPress} disabled={!isLoaded}>
         Sign in
       </Button>
