@@ -13,8 +13,7 @@ module.exports = function (api) {
           moduleName: "@env",
           path: "../../.env",
           allowlist: [
-            "NEXT_PUBLIC_OPEN_WEATHER_MAP_API_KEY",
-            "NEXT_PUBLIC_CLERK_FRONTEND_API",
+            "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
           ],
           safe: false,
           allowUndefined: true,

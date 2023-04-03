@@ -1,7 +1,7 @@
 packages:
-  - apps/expo
-  - apps/next
-  - packages/app
-  - packages/api
-  - packages/db
-  - scripts
+  - "apps/expo"
+  - "apps/next"
+  - "packages/app"
+  - "packages/api"
+  - "packages/db"
+  - "scripts"
