@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@acme/app": "0.1.0",
-    "@clerk/clerk-expo": "^0.10.16",
+    "@clerk/clerk-expo": "^0.14.2",
     "@dripsy/gradient": "^3.9.0",
     "@shopify/flash-list": "^1.4.0",
     "@shopify/react-native-skia": "^0.1.157",

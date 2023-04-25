@@ -67,9 +67,8 @@ pnpm db:setup
 To get authentication working, [create a Clerk account](https://dashboard.clerk.dev/sign-up), [add a Clerk application](https://dashboard.clerk.dev/apps/new) and set the Clerk API keys in the `.env` file:
 
 ```env
-NEXT_PUBLIC_CLERK_FRONTEND_API=...
-CLERK_API_KEY=...
-CLERK_JWT_KEY=...
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_***
+CLERK_SECRET_KEY=sk_***
 ```
 
 Ensure you setup Expo to play nicely for your setup, by following [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo)'s [Expo setup guide](https://github.com/t3-oss/create-t3-turbo#configure-expo-dev-script).

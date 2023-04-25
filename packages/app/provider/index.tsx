@@ -4,7 +4,7 @@ import { Auth } from "./auth";
 import type { Props as AuthProps } from "./auth";
 import { QueryProvider } from "./query";
 
-const apiKey = process.env.NEXT_PUBLIC_CLERK_FRONTEND_API ?? "";
+const apiKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? "";
 
 type Props = Omit<AuthProps, "children"> & {
   children: React.ReactNode;

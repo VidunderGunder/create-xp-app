@@ -14,11 +14,11 @@
     "db:seed:watch": "nodemon --watch seed.ts --exec ts-node seed.ts"
   },
   "dependencies": {
-    "@prisma/client": "^4.8.0"
+    "@prisma/client": "^4.12.0"
   },
   "devDependencies": {
     "dotenv-cli": "^6.0.0",
-    "prisma": "^4.8.0",
+    "prisma": "^4.12.0",
     "typescript": "^4.9.4"
   }
 }

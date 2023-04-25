@@ -28,6 +28,7 @@ const getBaseUrl = () => {
    * you don't have anything else running on it, or you'd have to change it.
    */
   const localhost = Constants.manifest?.debuggerHost?.split(":")[0];
+  // if you see the error below you can hardcode your ip address like so: return `http://192.168.1.47:3000`;
   if (!localhost)
     throw new Error("failed to get localhost, configure it manually");
   return `http://${localhost}:3000`;

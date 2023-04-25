@@ -4,9 +4,9 @@
   "main": "index.ts",
   "dependencies": {
     "@acme/api": "0.1.0",
-    "@clerk/clerk-expo": "^0.10.16",
-    "@clerk/clerk-react": "^4.7.0",
-    "@clerk/nextjs": "^4.6.15",
+    "@clerk/clerk-expo": "^0.14.2",
+    "@clerk/clerk-react": "^4.14.1",
+    "@clerk/nextjs": "^4.14.0",
     "@dripsy/gradient": "^3.9.0",
     "@react-three/fiber": "^8.9.1",
     "@shopify/flash-list": "^1.4.0",
@@ -43,9 +43,9 @@
   },
   "sideEffects": false,
   "devDependencies": {
+    "@types/three": "^0.146.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.20",
-    "tailwindcss": "^3.2.4",
-    "@types/three": "^0.146.0"
+    "tailwindcss": "^3.2.4"
   }
 }
