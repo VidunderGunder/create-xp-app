@@ -1,3 +1,7 @@
+DEPRECATED
+
+Use [T4 Stack](https://t4stack.com/) instead and study [this](https://youtu.be/aWfYxg-Ypm4?si=uYVamStBhS5T-ao_)
+
 ![hero](resources/hero.png)
 
 # Create XP App
